@@ -20,6 +20,10 @@
     padding: 0 18px;
 }
 
+.hidden {
+    visibility: hidden;
+}
+
 @import 'blocks/promo';
 @import 'blocks/header';
 @import 'blocks/bubbles';
@@ -28,3 +32,4 @@
 @import 'blocks/subtitle';
 @import 'blocks/stories';
 @import 'blocks/approve';
+@import 'blocks/playtest';

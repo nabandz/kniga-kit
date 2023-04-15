@@ -10,5 +10,5 @@ window.addEventListener('DOMContentLoaded', function() {
             disableOnInteraction: false,
             pauseOnMouseEnter: true,
         },
-      });
+    });
 });
