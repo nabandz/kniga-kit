@@ -3,7 +3,7 @@ window.addEventListener('DOMContentLoaded', function() {
     const swiper = new Swiper(".approve__slider", {
         loop: true,
         mousewheel: true,
-        spaceBetween: 25,
+        spaceBetween: 50,
         speed: 2500,
         autoplay: {
             delay: 5000,

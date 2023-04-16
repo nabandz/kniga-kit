@@ -5,8 +5,10 @@
     background: rgb(73,195,234);
     background: linear-gradient(180deg, rgba(73,195,234,1) 0%, rgba(71,45,233,1) 100%);
     &__wrapper {
-        margin: 0 auto;
-        margin-top: 245px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         max-width: 480px;
         display: flex;
         flex-direction: column;
@@ -43,6 +45,7 @@
     &__button {
         max-height: 60px;
         background: rgba(0, 0, 0, 0);
+        cursor: pointer;
         img {
             height: 100%;
         }

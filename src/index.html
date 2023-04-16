@@ -14,11 +14,13 @@
                 <div class="header__nav">
                     <a href="#" class="header__logo">КнигаКит</a>
                     <ul class="header__list">
-                        <li><a href="#" class="header__link">Главная страница</a></li>
-                        <li><a href="#" class="header__link">О приложении</a></li>
-                        <li><a href="#" class="header__link">Мир сказок</a></li>
+                        <li><a href="#about" class="header__link">О приложении</a></li>
+                        <li><a href="#stories" class="header__link">Мир сказок</a></li>
+                        <li><a href="#playtest" class="header__link">Плейтесты</a></li>
                     </ul>
-                    <button class="header__button">Связаться с нами</button>
+                    <a href="#footer">
+                        <button class="header__button">Связаться с нами</button>
+                    </a>
                 </div>
             </div>
             <div class="promo__wrapper">
@@ -26,15 +28,19 @@
                 <div class="promo__subtitle">Терапевтические сказки детям</div>
                 <div class="promo__description">Без рекламы. Безопасно. Одобрено психологами.</div>
                 <div class="promo__store">
-                    <button class="promo__button">
-                        <img src="icons/Google-play.png" alt="google-play">
-                    </button>
-                    <button class="promo__button">
-                        <img src="icons/Apple-store.png" alt="apple-store">
-                    </button>
+                    <a href="https://play.google.com/store/apps/details?id=com.bookuarium">
+                        <button class="promo__button">
+                            <img src="icons/Google-play.png" alt="google-play">
+                        </button>
+                    </a>
+                    <a href="https://testflight.apple.com/join/DbVTOTyp">
+                        <button class="promo__button">
+                            <img src="icons/Apple-store.png" alt="apple-store">
+                        </button>
+                    </a>
                 </div>
             </div>
-            <a href="#" class="promo__arrow">
+            <a href="#about" class="promo__arrow">
                 <img src="icons/Arrow.svg" alt="arrow">
             </a>
         </div>
@@ -51,7 +57,7 @@
             <div class="bubbles__bubble"><img src="icons/Bubble.svg" alt="bubble"></div>
         </div>
     </section>
-    <section class="about">
+    <section class="about" id="about">
         <div class="container">
             <h2 class="title about__title">О приложении</h2>
             <div class="subtitle about__subtitle">Вовлечённое приключение по страницам терапевтических сказок для детей 2-4 лет. Ребенок выполняет задания, вписанные в сюжет, проходит историю вместе с персонажами.</div>
@@ -115,7 +121,7 @@
             </div>
         </div>
     </section>
-    <section class="stories">
+    <section class="stories" id="stories">
         <div class="container">
             <h2 class="title stories__title">Погрузитесь в мир<br>увлекательных сказок</h2>
             <div class="stories__wrapper">
@@ -149,9 +155,9 @@
                             <div class="approve__prof">Практикующий психолог</div>
                             <div class="approve__social">
                                 <div class="approve__icon">
-                                    <img src="icons/Telegram.svg" alt="telegram">
+                                    <img src="icons/Social/Telegram.svg" alt="telegram">
                                 </div>
-                                <a href="#" class="approve__link">alenaak17</a>
+                                <a href="https://t.me/alenaak17" class="approve__link">alenaak17</a>
                             </div>
                             <div class="approve__text">
                                 “Мною просмотрены две сказки “Заяц ждет гостей” и “Котик учится играть”. Считаю, что эти сказки не только безопасны для детей, но и полезны для дальнейшего развития. Картинки несложные, но яркие, что помогает ребенку без труда воспринимать сюжет. Озвучка грамотная и все звуки очень четкие.<br><br>Детям можно включать эти сказки c года (в присутствии родителей и c сопутствующими комментариями). C 2-3 лет дети способны самостоятельно прослушать сказки и поучаствовать в интерактивах.”
@@ -164,9 +170,9 @@
                             <div class="approve__prof">Логопед, миофункциональный терапевт</div>
                             <div class="approve__social">
                                 <div class="approve__icon">
-                                    <img src="icons/Instagram.svg" alt="instagram">
+                                    <img src="icons/Social/Instagram.svg" alt="instagram">
                                 </div>
-                                <a href="#" class="approve__link">logoped.aleksandra</a>
+                                <a href="https://www.instagram.com/logoped.aleksandra/" class="approve__link">logoped.aleksandra</a>
                             </div>
                             <div class="approve__text">
                                 “Сказка ‘Котёнок учится играть’ подойдет для деток c 1,5-2 лет, задания возможны к выполнению по их нормотипичному развитию. Что понравилось: сюжет интересный, включение домашнего любимца, всегда нравится деткам. Сказка ‘Заяц ждёт гостей’ подойдет для детей c 2-x лет”
@@ -177,7 +183,7 @@
             </div>
         </div>
     </section>
-    <section class="playtest">
+    <section class="playtest" id="playtest">
         <div class="container">
             <h2 class="title playtest__title">Плейтесты приложения</h2>
             <div class="playtest__wrapper">
@@ -189,7 +195,7 @@
             </div>
         </div>
     </section>
-    <footer class="footer">
+    <footer class="footer" id="footer">
         <div class="container">
             <div class="footer__wrapper">
                 <div class="footer__info">
@@ -197,23 +203,27 @@
                     <a href="#" class="footer__terms-of-use">Условия использования</a>
                 </div>
                 <div class="footer__socials">
-                    <a href="#" class="footer__social">
+                    <a href="https://vk.com/knigakit_app" class="footer__social">
                         <img src="icons/Social/VK-white.svg" alt="vk">
                     </a>
-                    <a href="#" class="footer__social">
+                    <a href="https://t.me/knigakit_app" class="footer__social">
                         <img src="icons/Social/Telegram-white.svg" alt="telegram">
                     </a>
-                    <a href="#" class="footer__social">
+                    <a href="https://www.instagram.com/knigakit_app/" class="footer__social">
                         <img src="icons/Social/Instargam-white.svg" alt="instargam">
                     </a>
                 </div>
                 <div class="footer__store">
-                    <button class="footer__button">
-                        <img src="icons/Google-play.png" alt="google-play">
-                    </button>
-                    <button class="footer__button">
-                        <img src="icons/Apple-store.png" alt="apple-store">
-                    </button>
+                    <a href="https://play.google.com/store/apps/details?id=com.bookuarium">
+                        <button class="footer__button">
+                            <img src="icons/Google-play.png" alt="google-play">
+                        </button>
+                    </a>
+                    <a href="https://testflight.apple.com/join/DbVTOTyp">
+                        <button class="footer__button">
+                            <img src="icons/Apple-store.png" alt="apple-store">
+                        </button>
+                    </a>
                 </div>
             </div>
         </div>
