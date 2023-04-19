@@ -6,7 +6,7 @@
     &__wrapper {
         margin-top: 50px;
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(150px, 355px));
+        grid-template-columns: repeat(auto-fill, 355px);
         justify-content: center;
         align-items: start;
         gap: 60px;
@@ -16,7 +16,7 @@
         row-gap: 15px;
         &__wrapper {
             display: grid;
-            grid-template-columns: 120px 212px;
+            grid-template-columns: 120px 210px;
             column-gap: 25px;
             align-items: center;
         }

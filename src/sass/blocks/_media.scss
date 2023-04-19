@@ -33,6 +33,25 @@
             line-height: normal;
         }
     }
+    .about {
+        &__subtitle {
+            margin-top: 10px;
+        }
+        &__wrapper {
+            margin-top: 25px;
+        }
+        &-item {
+            &__title {
+                font-size: 22px;
+            }
+        }
+    }
+    .title {
+        font-size: 55px;
+    }
+    .subtitle {
+        font-size: 22px;
+    }
 }
 @media (max-width: 992px) {
     .container {
@@ -71,6 +90,27 @@
         &__menu-button {
             display: flex;
         }
+    }
+    .about {
+        &__subtitle {
+            margin-top: 10px;
+        }
+        &__wrapper {
+            margin-top: 35px;
+            grid-template-columns: repeat(auto-fill, 340px);
+            gap: 25px;
+        }
+        &-item {
+            &__title {
+                font-size: 22px;
+            }
+            &__wrapper {
+                grid-template-columns: 110px 210px;
+            }
+        }
+    }
+    .title {
+        font-size: 50px;
     }
 }
 @media (max-width: 768px) {
@@ -116,5 +156,41 @@
             width: 50px;
             height: 50px;
         }
+    }
+    .about {
+        &__subtitle {
+            margin-top: 10px;
+        }
+        &__wrapper {
+            margin-top: 35px;
+            grid-template-columns: repeat(auto-fill, 270px);
+            gap: 25px;
+        }
+        &-item {
+            row-gap: 10px;
+            &__wrapper {
+                grid-template-columns: 85px 170px;
+                column-gap: 15px;
+            }
+            &__picture {
+                padding: 10px;
+            }
+            &__title {
+                font-size: 17px;
+                line-height: normal;
+            }
+            &__description {
+                font-size: 15px;
+                line-height: normal;
+            }
+        }
+    }
+    .title {
+        font-size: 35px;
+        line-height: normal;
+    }
+    .subtitle {
+        font-size: 17px;
+        line-height: normal;
     }
 }
