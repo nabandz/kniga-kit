@@ -46,11 +46,24 @@
             }
         }
     }
+    .stories {
+        min-height: 700px;
+        &__slider {
+            max-width: 550px;
+        }
+        &-item {
+            &__picture {
+                min-width: 520px
+            }
+        }
+    }
     .title {
         font-size: 55px;
+        line-height: normal;
     }
     .subtitle {
         font-size: 22px;
+        line-height: normal;
     }
 }
 @media (max-width: 992px) {
@@ -96,7 +109,7 @@
             margin-top: 10px;
         }
         &__wrapper {
-            margin-top: 35px;
+            margin-top: 25px;
             grid-template-columns: repeat(auto-fill, 340px);
             gap: 25px;
         }
@@ -109,6 +122,20 @@
             }
         }
     }
+    .stories {
+        min-height: 580px;
+        &__sliders {
+            margin-top: 25px;
+        }
+        &__slider {
+            max-width: 450px;
+        }
+        &-item {
+            &__picture {
+                min-width: 425px;
+            }
+        }
+    }
     .title {
         font-size: 50px;
     }
@@ -116,6 +143,23 @@
 @media (max-width: 768px) {
     .container {
         max-width: 540px;
+    }
+    .stories {
+        min-height: 530px;
+        &__slider {
+            max-width: 350px;
+            &_front {
+                top: 50px;
+            }
+        }
+        &-item {
+            &__tablet {
+                width: 100%;
+            }
+            &__picture {
+                min-width: 330px;
+            }
+        }
     }
 }
 @media (max-width: 576px) {
@@ -182,6 +226,24 @@
             &__description {
                 font-size: 15px;
                 line-height: normal;
+            }
+        }
+    }
+    .stories {
+        min-height: auto;
+        &__slider {
+            margin: 0 auto;
+            max-width: 270px;
+            &_front {
+                display: none;
+            }
+        }
+        &-item {
+            &__tablet {
+                width: 100%;
+            }
+            &__picture {
+                min-width: 255px;
             }
         }
     }

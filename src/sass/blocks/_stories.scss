@@ -3,6 +3,7 @@
     padding: 50px 0;
     background: url(../../img/Background-line.svg) top (center/cover) no-repeat;
     &__sliders {
+        margin-top: 50px;
         position: relative;
         width: 100%;
     }
@@ -17,12 +18,11 @@
     }
     &__wrapper {
         position: relative;
-        margin-top: 50px;
     }
     &-item {
         &__tablet {
+            width: 100%;
             position: relative;
-            max-width: 674px;
             img {
                 width: 100%;
             }
@@ -38,11 +38,5 @@
                 width: 100%;
             }
         }
-        /* &_front {
-            position: absolute;
-            right: 0;
-            top: 90px;
-        } */
     }
-    
 }
