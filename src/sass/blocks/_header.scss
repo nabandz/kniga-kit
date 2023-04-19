@@ -1,6 +1,6 @@
 .header {
     padding-top: 40px;
-    &__nav {
+    &__wrapper {
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -56,6 +56,34 @@
             background: rgba(#FFFFFF, 1);
             color: #49C3EA;
             transition: 0.4s;
+        }
+    }
+    &__menu-button {
+        display: none;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
+        width: 30px;
+        height: 20px;
+        span {
+            height: 2px;
+            width: 85%;
+            border-radius: 14px;
+            background-color: #FFFFFF;
+            transition: all .5s ease;
+            &:nth-child(2) {
+                width: 100%;
+            }
+            &:nth-child(3) {
+                width: 75%;
+            }
+        }
+        &:hover {
+            span {
+                &:nth-child(1n) {
+                    width: 100%;
+                }
+            }
         }
     }
 }
