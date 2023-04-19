@@ -28,6 +28,7 @@ window.addEventListener('DOMContentLoaded', function() {
 
     //Slider - section Approve
     const swiperApprove = new Swiper(".approve__slider", {
+        autoHeight: true,
         loop: true,
         mousewheel: true,
         spaceBetween: 50,

@@ -57,6 +57,14 @@
             }
         }
     }
+    .approve {
+        &__name {
+            font-size: 22px;
+        }
+        &__prof {
+            font-size: 22px;
+        }
+    }
     .title {
         font-size: 55px;
         line-height: normal;
@@ -136,6 +144,17 @@
             }
         }
     }
+    .approve {
+        &__container {
+            grid-template-columns: 450px 200px;
+        }
+        &__link {
+            font-size: 17px;
+        }
+        &__icon {
+            width: 17px;
+        }
+    }
     .title {
         font-size: 50px;
     }
@@ -159,6 +178,16 @@
             &__picture {
                 min-width: 330px;
             }
+        }
+    }
+    .approve {
+        &__container {
+            display: flex;
+            flex-direction: column;
+        }
+        &__social {
+            margin-top: 10px;
+            justify-content: start;
         }
     }
 }
@@ -245,6 +274,24 @@
             &__picture {
                 min-width: 255px;
             }
+        }
+    }
+    .approve {
+        &__name {
+            font-size: 17px;
+            line-height: normal;
+        }
+        &__prof {
+            font-size: 17px;
+            line-height: normal;
+        }
+        &__link {
+            font-size: 15px;
+            line-height: normal;
+        }
+        &__text {
+            font-size: 15px;
+            line-height: normal;
         }
     }
     .title {
