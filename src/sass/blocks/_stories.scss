@@ -2,6 +2,19 @@
     min-height: 800px;
     padding: 50px 0;
     background: url(../../img/Background-line.svg) top (center/cover) no-repeat;
+    &__sliders {
+        position: relative;
+        width: 100%;
+    }
+    &__slider {
+        max-width: 674px;
+        margin: 0;
+        &_front {
+            position: absolute;
+            top: 90px;
+            right: 0;
+        }
+    }
     &__wrapper {
         position: relative;
         margin-top: 50px;
@@ -25,11 +38,11 @@
                 width: 100%;
             }
         }
-        &_front {
+        /* &_front {
             position: absolute;
             right: 0;
             top: 90px;
-        }
+        } */
     }
     
 }

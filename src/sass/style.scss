@@ -28,6 +28,10 @@ html {
     visibility: hidden;
 }
 
+.none {
+    display: none;
+}
+
 @import 'blocks/promo';
 @import 'blocks/header';
 @import 'blocks/bubbles';
@@ -38,3 +42,4 @@ html {
 @import 'blocks/approve';
 @import 'blocks/playtest';
 @import 'blocks/footer';
+@import 'blocks/media';
