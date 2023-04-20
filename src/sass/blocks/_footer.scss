@@ -50,6 +50,8 @@
     &__store {
         width: 33%;
         display: flex;
+        justify-content: end;
+        align-items: center;
         column-gap: 25px;
     }
     &__button {

@@ -65,6 +65,12 @@
             font-size: 22px;
         }
     }
+    .policy {
+        &__text {
+            font-size: 22px;
+            line-height: normal;
+        }
+    }
     .title {
         font-size: 55px;
         line-height: normal;
@@ -355,12 +361,16 @@
             justify-content: center;
         }
     }
+    .policy {
+        &__text {
+            font-size: 17px;
+        }
+    }
     .title {
         font-size: 35px;
         line-height: normal;
     }
     .subtitle {
         font-size: 17px;
-        line-height: normal;
     }
 }
