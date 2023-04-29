@@ -163,6 +163,9 @@
         }
     }
     .promo {
+        &__arrow {
+            display: none;
+        }
         &-elements {
             &__book {
                 width: 650px;
@@ -302,6 +305,16 @@
             }
         }
     }
+    .about {
+        &-elements {
+            &__fish {
+                &_white {
+                    top: 150px;
+                }
+            }
+        
+        }
+    }
     .stories {
         min-height: 530px;
         &__slider {
@@ -380,9 +393,6 @@
         &__socials {
             display: none;
         }
-        &__arrow {
-            display: none;
-        }
         &-elements {
             overflow: hidden;
             &__book {
@@ -450,6 +460,18 @@
                 font-size: 15px;
                 line-height: normal;
             }
+        }
+        &-elements {
+            &__fish {
+                &_red {
+                    top: -35px;
+                }
+                &_white {
+                    top: auto;
+                    bottom: -75px;
+                }
+            }
+        
         }
     }
     .stories {
