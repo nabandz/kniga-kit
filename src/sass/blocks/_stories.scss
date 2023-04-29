@@ -3,6 +3,7 @@
     padding: 50px 0;
     background: url(../../img/Background-line.svg) top (center/cover) no-repeat;
     &__sliders {
+        z-index: 2;
         margin-top: 50px;
         position: relative;
         width: 100%;
@@ -37,6 +38,35 @@
                 border-radius: 8px;
                 width: 100%;
             }
+        }
+    }
+    &-elements {
+        z-index: 1;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        &__ship {
+            animation: ship 4s infinite alternate ease-in-out;
+            position: absolute;
+            top: -30px;
+            right: 42px;
+            width: 218px;
+            img {
+                width: 100%;
+            }
+        }
+    }
+    @keyframes ship {
+        0% {
+            transform: translateY(0) rotate(-1deg);
+        }
+        50% {
+            transform: translateY(-5px) rotate(1deg);
+        }
+        100% {
+            transform: translateY(0) rotate(-1deg);
         }
     }
 }

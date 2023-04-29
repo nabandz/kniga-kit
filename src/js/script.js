@@ -21,6 +21,7 @@ window.addEventListener('DOMContentLoaded', function() {
         effect: "fade",
         spaceBetween: 50,
         speed: 2500,
+        allowTouchMove: false,
         autoplay: {
             delay: 3000,
         },

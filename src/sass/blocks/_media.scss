@@ -100,6 +100,13 @@
                 min-width: 520px
             }
         }
+        &-elements {
+            &__ship {
+                top: 19px;
+                right: 32px;
+                width: 179px;
+            }
+        }
     }
     .approve {
         &__name {
@@ -224,6 +231,13 @@
                 min-width: 425px;
             }
         }
+        &-elements {
+            &__ship {
+                top: 111px;
+                right: 32px;
+                width: 88px;
+            }
+        }
     }
     .approve {
         &__container {
@@ -331,6 +345,9 @@
                 min-width: 330px;
             }
         }
+        &-elements {
+            display: none;
+        }
     }
     .approve {
         &__container {
@@ -367,7 +384,6 @@
     }
     .promo {
         &__wrapper {
-            margin-top: 150px;
             justify-content: center;
             align-items: center;
             text-align: center;
