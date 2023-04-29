@@ -1,3 +1,42 @@
+@media (max-width: 1400px) {
+    .promo {
+        &-elements {
+            &__book {
+                width: 900px;
+                left: -64px;
+            }
+            &__whale {
+                right: 25px;
+            }
+            &__shell {
+                bottom: 157px;
+            }
+            &__pencil {
+                bottom: 166px;
+                left: 339px;
+            }
+            &__fish {
+                &_blue {
+                    right: 90px;
+                }
+                &_red {
+                    &:nth-child(1) {
+                        right: 143px;
+                    }
+                    &:nth-child(2) {
+                        right: 85px;
+                    }
+                    &:nth-child(3) {
+                        right: 20px;
+                    }
+                }
+                &_yellow {
+                    right: 15px;
+                }
+            }
+        }
+    }
+}
 @media (max-width: 1200px) {
     .container {
         max-width: 960px;
@@ -31,6 +70,11 @@
         &__description {
             font-size: 20px;
             line-height: normal;
+        }
+        &-elements {
+            &__whale {
+                width: 500px;
+            }
         }
     }
     .about {
@@ -82,13 +126,13 @@
 }
 @media (max-width: 992px) {
     .container {
-        max-width: 720px;
+        max-width: 100%;
     }
     .header {
         &__nav {
             display: flex;
             align-items: center;
-            z-index: -1;
+            z-index: 2;
             position: fixed;
             justify-content: center;
             left: 0;
@@ -116,6 +160,34 @@
         }
         &__menu-button {
             display: flex;
+        }
+    }
+    .promo {
+        &-elements {
+            &__book {
+                width: 650px;
+                left: 0px;
+            }
+            &__whale {
+                top: 370px;
+                right: 0px;
+                width: 350px;
+            }
+            &__shell {
+                width: 105px; 
+                bottom: 107px;
+                left: 58px;
+            }
+            &__pencil {
+                bottom: 116px;
+                left: 289px;
+                width: 63px;
+            }
+            &__fish {
+                &_blue {
+                    bottom: 154px;
+                }
+            }
         }
     }
     .about {
@@ -184,8 +256,51 @@
     }
 }
 @media (max-width: 768px) {
-    .container {
-        max-width: 540px;
+    .promo {
+        &-elements {
+            &__book {
+                width: 500px;
+            }
+            &__whale {
+                top: 472px;
+                right: 15px;
+                width: 350px;
+            }
+            &__shell {
+                width: 95px;
+                bottom: 77px;
+                left: 58px;
+            }
+            &__pencil {
+                bottom: 80px;
+                left: 227px;
+                width: 63px
+            }
+            &__fish {
+                &_blue {
+                    bottom: 92px;
+                    right: 90px;
+                }
+                &_red {
+                    &:nth-child(1) {
+                        top: 122px;
+                        right: 158px;
+                    }
+                    &:nth-child(2) {
+                        top: 173px;
+                        right: 85px;
+                    }
+                    &:nth-child(3) {
+                        bottom: 126px;
+                        right: 20px;
+                    }
+                }
+                &_yellow {
+                    top: 214px;
+                    right: 15px;
+                }
+            }
+        }
     }
     .stories {
         min-height: 530px;
@@ -226,9 +341,6 @@
     }
 }
 @media (max-width: 576px) {
-    .container {
-        max-width: 100%;
-    }
     .header {
         &__logo {
             font-size: 30px;
@@ -241,6 +353,12 @@
         }
     }
     .promo {
+        &__wrapper {
+            margin-top: 150px;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
         &__title {
             font-size: 55px;
         }
@@ -259,9 +377,51 @@
         &__button {
             height: 50px;
         }
+        &__socials {
+            display: none;
+        }
         &__arrow {
-            width: 50px;
-            height: 50px;
+            display: none;
+        }
+        &-elements {
+            overflow: hidden;
+            &__book {
+                width: 460px;
+            }
+            &__whale {
+                width: 300px;
+                top: 512px;
+                right: 0px;
+            }
+            &__shell {
+                width: 74px;
+                bottom: 70px;
+                left: 47px;
+            }
+            &__pencil {
+                bottom: 79px;
+                left: 188px;
+                width: 45px;
+            }
+            &__fish {
+                &_blue {
+                    bottom: 50px;
+                    right: 0;
+                }
+                &_red {
+                    &:nth-child(1) {
+                        top: 111px;
+                        right: 158px;
+                    }
+                    &:nth-child(2) {
+                        top: 151px;
+                        right: 85px;
+                    }
+                }
+                &_yellow {
+                    top: 191px;
+                }
+            }
         }
     }
     .about {
