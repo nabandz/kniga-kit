@@ -249,6 +249,10 @@
         &__icon {
             width: 17px;
         }
+        &__container {
+            max-width: 575px;
+            min-height: 380px;
+        }
     }
     .footer {
         &__wrapper {
@@ -357,6 +361,10 @@
         &__social {
             margin-top: 10px;
             justify-content: start;
+        }
+        &__container {
+            max-width: 375px;
+            min-height: 480px;
         }
     }
     .footer {
@@ -524,6 +532,25 @@
         &__text {
             font-size: 15px;
             line-height: normal;
+        }
+        &__social {
+            position: absolute;
+            bottom: 15px;
+        }
+        &__container {
+            padding: 15px;
+            max-width: 180px;
+            min-height: 580px;
+        }
+        &__button {
+            width: 40px;
+            height: 40px;
+            &_prev {
+                left: 0px;
+            }
+            &_next {
+                right: 0px;;
+            }
         }
     }
     .playtest {

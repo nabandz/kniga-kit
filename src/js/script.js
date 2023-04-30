@@ -19,7 +19,6 @@ window.addEventListener('DOMContentLoaded', function() {
     const swiperStories = new Swiper(".stories__slider", {
         loop: true,
         effect: "fade",
-        spaceBetween: 50,
         speed: 2500,
         allowTouchMove: false,
         autoplay: {
@@ -31,12 +30,16 @@ window.addEventListener('DOMContentLoaded', function() {
     const swiperApprove = new Swiper(".approve__slider", {
         loop: true,
         mousewheel: true,
-        spaceBetween: 50,
         speed: 2500,
+        spaceBetween: 50,
         autoplay: {
             delay: 5000,
             disableOnInteraction: false,
             pauseOnMouseEnter: true,
+        },
+        navigation: {
+            nextEl: ".approve__button_next",
+            prevEl: ".approve__button_prev",
         },
     });
 });
