@@ -116,6 +116,18 @@
             font-size: 22px;
         }
     }
+    .playtest {
+        &-elements {
+            &__fish {
+                &_blue {
+                    left: 230px;
+                }
+                &_red {
+                    bottom: -30px;
+                }
+            }
+        }
+    }
     .policy {
         &__text {
             font-size: 22px;
@@ -254,6 +266,15 @@
             min-height: 380px;
         }
     }
+    .playtest {
+        &-elements {
+            &__fish {
+                &_blue {
+                    left: 140px;
+                }
+            }
+        }
+    }
     .footer {
         &__wrapper {
             column-gap: 25px;
@@ -365,6 +386,19 @@
         &__container {
             max-width: 375px;
             min-height: 480px;
+        }
+    }
+    .playtest {
+        &-elements {
+            &__fish {
+                &_blue {
+                    top: -35px;
+                    left: 20px;
+                }
+                &_red {
+                    bottom: -40px;
+                }
+            }
         }
     }
     .footer {
