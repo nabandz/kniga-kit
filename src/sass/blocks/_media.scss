@@ -595,6 +595,16 @@
             }
         }
     }
+    .try-app {
+        &__store {
+            flex-direction: column;
+            align-items: center;
+            row-gap: 10px;
+        }
+        &__button {
+            height: 50px;
+        }
+    }
     .footer {
         &__wrapper {
             flex-direction: column;
