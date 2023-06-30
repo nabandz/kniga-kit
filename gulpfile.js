@@ -1,71 +1,51 @@
-const gulp        = require('gulp');
-const browserSync = require('browser-sync');
-const sass        = require('gulp-sass')(require('sass'));
-const cleanCSS = require('gulp-clean-css');
-const autoprefixer = require('gulp-autoprefixer');
-const rename = require("gulp-rename");
-const imagemin = require('gulp-imagemin');
-const htmlmin = require('gulp-htmlmin');
+import gulp from 'gulp' // Основной модуль
+import { path } from './gulp/config/path.js' // Импорт путей
+import { plugins } from './gulp/config/plugins.js' // Импорт общих плагинов
 
-gulp.task('server', function() {
+// Передаем значения в глобальную переменную
+global.app = {
+    isBuild: process.argv.includes('--build'),
+    isDev: !process.argv.includes('--build'),
+    path: path,
+    gulp: gulp,
+    plugins: plugins,
+}
 
-    browserSync({
-        server: {
-            baseDir: "dist"
-        }
-    });
+// Импорт задач
+import { copy } from './gulp/tasks/copy.js'
+import { reset } from './gulp/tasks/reset.js'
+import { html } from './gulp/tasks/html.js'
+import { server } from './gulp/tasks/server.js'
+import { scss } from './gulp/tasks/scss.js'
+import { js } from './gulp/tasks/js.js'
+import { images } from './gulp/tasks/images.js'
+import { video } from './gulp/tasks/video.js'
+import { otfToTtf, ttfToWoff, fontStyle } from './gulp/tasks/fonts.js'
+import { zip } from './gulp/tasks/zip.js'
 
-    gulp.watch("src/*.html").on('change', browserSync.reload);
-});
+// Наблюдатель за изменениями в файлах
+function watcher() {
+    gulp.watch(path.watch.files, copy)
+    gulp.watch(path.watch.html, html)
+    gulp.watch(path.watch.scss, scss)
+    gulp.watch(path.watch.js, js)
+    gulp.watch(path.watch.images, images)
+    gulp.watch(path.watch.video, video)
+}
 
-gulp.task('styles', function() {
-    return gulp.src("src/sass/**/*.+(scss|sass)")
-        .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
-        .pipe(rename({suffix: '.min', prefix: ''}))
-        .pipe(autoprefixer())
-        .pipe(cleanCSS({compatibility: 'ie8'}))
-        .pipe(gulp.dest("dist/css"))
-        .pipe(browserSync.stream());
-});
+// Последовательная обработка шрифтов
+const fonts = gulp.series(otfToTtf, ttfToWoff, fontStyle)
+// Основные задачи
+const mainTasks = gulp.series(fonts, gulp.parallel(copy, html, scss, js, images, video))
+// Построение сценариев выполнения задач
+const dev = gulp.series(reset, mainTasks, gulp.parallel(watcher, server))
+const build = gulp.series(reset, mainTasks)
+const deployZIP = gulp.series(reset, mainTasks, zip)
 
-gulp.task('watch', function() {
-    gulp.watch("src/sass/**/*.+(scss|sass|css)", gulp.parallel('styles'));
-    gulp.watch("src/*.html").on('change', gulp.parallel('html'));
-    gulp.watch("src/js/**/*.js").on('change', gulp.parallel('scripts'));
-    gulp.watch("src/fonts/**/*").on('all', gulp.parallel('fonts'));
-    gulp.watch("src/icons/**/*").on('all', gulp.parallel('icons'));
-    gulp.watch("src/img/**/*").on('all', gulp.parallel('images'));
-});
+// Экспорт сценариев
+export { dev }
+export { build }
+export { deployZIP }
 
-gulp.task('html', function () {
-    return gulp.src("src/*.html")
-        .pipe(htmlmin({ collapseWhitespace: true }))
-        .pipe(gulp.dest("dist/"));
-});
-
-gulp.task('scripts', function () {
-    return gulp.src("src/js/**/*.js")
-        .pipe(gulp.dest("dist/js"))
-        .pipe(browserSync.stream());
-});
-
-gulp.task('fonts', function () {
-    return gulp.src("src/fonts/**/*")
-        .pipe(gulp.dest("dist/fonts"))
-        .pipe(browserSync.stream());
-});
-
-gulp.task('icons', function () {
-    return gulp.src("src/icons/**/*")
-        .pipe(gulp.dest("dist/icons"))
-        .pipe(browserSync.stream());
-});
-
-gulp.task('images', function () {
-    return gulp.src("src/img/**/*")
-        .pipe(imagemin())
-        .pipe(gulp.dest("dist/img"))
-        .pipe(browserSync.stream());
-});
-
-gulp.task('default', gulp.parallel('watch', 'server', 'styles', 'scripts', 'fonts', 'icons', 'html', 'images'));
+// Выполнение сценария по умолчанию
+gulp.task('default', dev)

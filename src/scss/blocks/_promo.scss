@@ -1,0 +1,222 @@
+.promo {
+    z-index: 1;
+    position: relative;
+    height: 900px;
+    background: url(../img/Background.jpg) bottom (center/cover) no-repeat;
+    &__wrapper {
+        margin-top: 150px;
+        max-width: 480px;
+        display: flex;
+        flex-direction: column;
+        z-index: -2;
+    }
+    &__title {
+        margin: 0;
+        font-weight: 800;
+        font-size: 100px;
+        line-height: 117px;
+        color: #FFFFFF;
+    }
+    &__subtitle {
+        margin-top: 5px;
+        font-weight: 500;
+        font-size: 30px;
+        line-height: 35px;
+        color: #FFFFFF;
+    }
+    &__description {
+        margin-top: 10px;
+        font-weight: 300;
+        font-size: 20px;
+        line-height: 23px;
+        color: #FFFFFF;
+    }
+    &__store {
+        margin-top: 25px;
+        display: flex;
+        column-gap: 30px;
+    }
+    &__button {
+        height: 60px;
+        background: rgba(0, 0, 0, 0);
+        cursor: pointer;
+        transition: 0.4s;
+        img {
+            height: 100%;
+        }
+        &:hover {
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
+        }
+    }
+    &__socials {
+        padding-right: 25px;
+        position: absolute;
+        bottom: 50px;
+        right: 0px;
+        display: flex;
+        column-gap: 25px;
+        align-items: center;
+        justify-content: end;
+    }
+    &__social {
+        width: 35px;
+        height: 35px;
+        img {
+            width: 100%;
+        }
+        
+    }
+    &__arrow {
+        position: absolute;
+        bottom: 50px;
+        left: 50%;
+        height: 60px;
+        width: 60px;
+        transform: translateX(-50%);
+        animation: upDown 1.5s infinite alternate ease-in-out;
+        img {
+            rotate: 90;
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &-elements {
+        z-index: -3;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+		&__book {
+            position: absolute;
+            bottom: -10px;
+            left: -84px;
+            width: 1000px;
+            img {
+                width: 100%;
+            }
+		}
+		&__whale {
+            position: absolute;
+            top: 165px;
+            right: -50px;
+            width: 600px;
+            animation: swim 12s infinite alternate ease-in-out;
+            img {
+                width: 100%;
+            }
+		}
+        &__shell {
+            position: absolute;
+            bottom: 187px;
+            left: 38px;
+            width: 125px; 
+            img {
+                width: 100%;
+            }
+        }
+        &__pencil {
+            position: absolute;
+            bottom: 196px;
+            left: 379px;
+            animation: drawing 3s infinite alternate ease-in-out;
+            width: 93px; 
+            img {
+                width: 100%;
+            }
+        }
+		&__fishs {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+		}
+		&__fish {
+            animation: swim 10s infinite alternate ease-in-out;
+			&_blue {
+                position: absolute;
+                bottom: 234px;
+                right: -10px;
+                animation-duration:7s;
+			}
+			&_red {
+                &:nth-child(1) {
+                    position: absolute;
+                    top: 177px;
+                    right: 93px;
+                    animation-duration:8s;
+                }
+                &:nth-child(2) {
+                    position: absolute;
+                    top: 233px;
+                    right: 45px;
+                    animation-duration:6s;
+                }
+                &:nth-child(3) {
+                    position: absolute;
+                    bottom: 213px;
+                    right: -85px;
+                    animation-duration:5s;
+                }
+			}
+            &_yellow {
+                position: absolute;
+                top: 244px;
+                right: -35px;
+                animation-duration:8s;
+            }
+		}
+    }
+
+    @keyframes upDown {
+        from {
+            bottom: 50px;
+        }
+        to {
+            bottom: 25px;
+        }
+    }
+
+    @keyframes drawing {
+        0% { 
+            transform: translateX(0%) rotate(15deg);
+        }
+        30% { 
+            transform: translateX(10%) rotateZ(5deg);
+        }
+        60% { 
+            transform: translateX(20%) rotateZ(15deg);
+        }
+        70% { 
+            transform: translateX(30%) rotateZ(5deg);
+        }
+        80% { 
+            transform: translateX(40%);
+        }
+        90% { 
+            transform: translateX(45%);
+        }
+        100% { 
+            transform: translateX(50%);
+        }
+    }
+
+    @keyframes swim {
+        0% {
+            transform: translateY(0) rotate(-2deg);
+        }
+        25% {
+            transform: translateY(-10px) rotate(2deg);
+        }
+        50% {
+            transform: translateY(0) rotate(-2deg);
+        }
+        75% {
+            transform: translateY(-10px) rotate(2deg);
+        }
+        100% {
+            transform: translateY(0) rotate(-2deg);
+        }
+    }
+}
