@@ -33,15 +33,22 @@
         <div class="container">
             <div class="header">
                 <div class="header__wrapper">
-                    <a href="#" class="header__logo">КнигаКит</a>
+                    <a href="#" class="header__logo">Книга<span>Кит</span></a>
                     <nav class="header__nav">
                         <ul class="header__list">
-                            <li><a href="#about" class="header__link">О приложении</a></li>
-                            <li><a href="#stories" class="header__link">Мир сказок</a></li>
-                            <li><a href="#playtest" class="header__link">Плейтесты</a></li>
+                            <li><a href="#" class="header__link">О приложении</a></li>
+                            <li><a href="#" class="header__link">Одобрено психологами</a></li>
+                            <li><a href="#" class="header__link">Наша команда</a></li>
                         </ul>
                     </nav>
-                    <a href="#footer" class="header__button">Связаться с нами</a>
+                    <div class="header__stores">
+                        <a href="https://play.google.com/store/apps/details?id=com.bookuarium" class="header__button">
+                            <img src="@img/icons/google-play.png" alt="google-play">
+                        </a>
+                        <a href="https://testflight.apple.com/join/DbVTOTyp" class="header__button">
+                            <img src="@img/icons/app-store.png" alt="app-store">
+                        </a>
+                    </div>
                     <div class="header__menu-button">
                         <span></span>
                         <span></span>
@@ -53,57 +60,59 @@
                 <h1 class="promo__title">КнигаКит</h1>
                 <div class="promo__subtitle">Терапевтические сказки детям</div>
                 <div class="promo__description">Без рекламы. Безопасно. Одобрено психологами.</div>
-                <div class="promo__store">
-                    <a href="https://play.google.com/store/apps/details?id=com.bookuarium" class="promo__button">
-                        <img src="@img/icons/Google-play.png" alt="google-play">
-                    </a>
-                    <a href="https://testflight.apple.com/join/DbVTOTyp" class="promo__button">
-                        <img src="@img/icons/App-store.png" alt="app-store">
-                    </a>
+                <div class="promo__stores">
+                    <div class="promo__item">
+                        <div class="promo__store">Google Play</div>
+                        <a href="https://play.google.com/store/apps/details?id=com.bookuarium" class="promo__button">
+                            <img src="@img/icons/QR-code/qr-google-play.png" class="promo__google-play" alt="google-play">
+                        </a>
+                    </div>
+                    <div class="promo__item">
+                        <div class="promo__store">App Store</div>
+                        <a href="https://testflight.apple.com/join/DbVTOTyp" class="promo__button">
+                            <img src="@img/icons/QR-code/qr-app-store.png" class="promo__app-store" alt="app-store">
+                        </a>
+                    </div>
                 </div>
             </div>
             <div class="promo__socials">
                 <a href="https://vk.com/knigakit_app" class="promo__social">
-                    <img src="@img/icons/Social/VK-white.svg" alt="vk">
+                    <img src="@img/icons/Social/vk-white.svg" alt="vk">
                 </a>
                 <a href="https://t.me/knigakit_app" class="promo__social">
-                    <img src="@img/icons/Social/Telegram-white.svg" alt="telegram">
-                </a>
-                <a href="https://www.instagram.com/knigakit_app/" class="promo__social">
-                    <img src="@img/icons/Social/Link-white.svg" alt="link">
+                    <img src="@img/icons/Social/telegram-white.svg" alt="telegram">
                 </a>
             </div>
-            <div class="promo-elements">
-                <img src="@img/icons/Elements/Whale.png" alt="whale" class="promo-elements__whale">
-                <img src="@img/icons/Elements/Book.png" alt="book" class="promo-elements__book">
-                <img src="@img/icons/Elements/Shell.png" alt="shell" class="promo-elements__shell">
-                <img src="@img/icons/Elements/Pencil.png" alt="pencil" class="promo-elements__pencil">
-                <div class="promo-elements__fishs">
-                    <img src="@img/icons/Elements/Red-fish.png" alt="red-fish" class="promo-elements__fish promo-elements__fish_red">
-                    <img src="@img/icons/Elements/Red-fish.png" alt="red-fish" class="promo-elements__fish promo-elements__fish_red">
-                    <img src="@img/icons/Elements/Red-fish.png" alt="red-fish" class="promo-elements__fish promo-elements__fish_red">
-                    <img src="@img/icons/Elements/Yellow-fish.png" alt="yellow-fish" class="promo-elements__fish promo-elements__fish_yellow">
-                    <img src="@img/icons/Elements/Blue-fish.png" alt="blue-fish" class="promo-elements__fish promo-elements__fish_blue">
+            <div class="bg-elements">
+                <img src="@img/icons/Elements/whale.png" alt="whale" class="bg-elements__whale">
+                <div class="bg-elements__squares">
+                    <div class="bg-elements__square"></div>
+                    <div class="bg-elements__square"></div>
+                    <div class="bg-elements__square"></div>
+                </div>
+                <div class="bg-elements__fishs">
+                    <img src="@img/icons/Elements/red-fish.png" alt="red-fish" class="bg-elements__fish bg-elements__fish_red">
+                    <img src="@img/icons/Elements/red-fish.png" alt="red-fish" class="bg-elements__fish bg-elements__fish_red">
+                    <img src="@img/icons/Elements/blue-fish.png" alt="blue-fish" class="bg-elements__fish bg-elements__fish_blue">
+                    <img src="@img/icons/Elements/yellow-fish.png" alt="yellow-fish" class="bg-elements__fish bg-elements__fish_yellow">
+                    <img src="@img/icons/Elements/white-fish.png" alt="white-fish" class="bg-elements__fish bg-elements__fish_white">
                 </div>
                 <div class="bubbles">
-                    <div class="bubbles__bubble"><img src="@img/icons/Bubble.svg" alt="bubble"></div>
-                    <div class="bubbles__bubble"><img src="@img/icons/Bubble.svg" alt="bubble"></div>
-                    <div class="bubbles__bubble"><img src="@img/icons/Bubble.svg" alt="bubble"></div>
-                    <div class="bubbles__bubble"><img src="@img/icons/Bubble.svg" alt="bubble"></div>
-                    <div class="bubbles__bubble"><img src="@img/icons/Bubble.svg" alt="bubble"></div>
-                    <div class="bubbles__bubble"><img src="@img/icons/Bubble.svg" alt="bubble"></div>
-                    <div class="bubbles__bubble"><img src="@img/icons/Bubble.svg" alt="bubble"></div>
-                    <div class="bubbles__bubble"><img src="@img/icons/Bubble.svg" alt="bubble"></div>
-                    <div class="bubbles__bubble"><img src="@img/icons/Bubble.svg" alt="bubble"></div>
-                    <div class="bubbles__bubble"><img src="@img/icons/Bubble.svg" alt="bubble"></div>
+                    <div class="bubbles__bubble"><img src="@img/icons/bubble.svg" alt="bubble"></div>
+                    <div class="bubbles__bubble"><img src="@img/icons/bubble.svg" alt="bubble"></div>
+                    <div class="bubbles__bubble"><img src="@img/icons/bubble.svg" alt="bubble"></div>
+                    <div class="bubbles__bubble"><img src="@img/icons/bubble.svg" alt="bubble"></div>
+                    <div class="bubbles__bubble"><img src="@img/icons/bubble.svg" alt="bubble"></div>
+                    <div class="bubbles__bubble"><img src="@img/icons/bubble.svg" alt="bubble"></div>
+                    <div class="bubbles__bubble"><img src="@img/icons/bubble.svg" alt="bubble"></div>
+                    <div class="bubbles__bubble"><img src="@img/icons/bubble.svg" alt="bubble"></div>
+                    <div class="bubbles__bubble"><img src="@img/icons/bubble.svg" alt="bubble"></div>
+                    <div class="bubbles__bubble"><img src="@img/icons/bubble.svg" alt="bubble"></div>
                 </div>
             </div>
-            <a href="#about" class="promo__arrow">
-                <img src="@img/icons/Arrow.svg" alt="arrow">
-            </a>
         </div>
     </section>
-    <section class="about" id="about">
+    <section class="about none" id="about">
         <div class="container">
             <h2 class="title about__title">О приложении</h2>
             <div class="subtitle about__subtitle">Вовлечённое приключение по страницам терапевтических сказок для детей 2-4 лет. Ребенок выполняет задания, вписанные в сюжет, проходит историю вместе с персонажами.</div>
@@ -171,7 +180,7 @@
             </div>
         </div>
     </section>
-    <section class="stories" id="stories">
+    <section class="stories none" id="stories">
         <div class="container">
             <h2 class="title stories__title">Погрузитесь в мир<br>увлекательных сказок</h2>
             <div class="stories__sliders">
@@ -221,7 +230,7 @@
             </div>
         </div>
     </section>
-    <section class="approve">
+    <section class="approve none">
         <div class="container">
             <h2 class="title title_white approve__title">Одобрено психологами<br>и педагогами</h2>
             <div class="approve__slider swiper slider">
@@ -266,7 +275,7 @@
             </div>
         </div>
     </section>
-    <section class="playtest" id="playtest">
+    <section class="playtest none" id="playtest">
         <div class="container">
             <h2 class="title playtest__title">Дети играют</h2>
             <div class="playtest__wrapper">
@@ -282,7 +291,7 @@
             </div>
         </div>
     </section>
-    <section class="try-app">
+    <section class="try-app none">
         <div class="container">
             <h2 class="title title_white try-app__title">Попробуйте наше<br>приложение</h2>
             <div class="try-app__wrapper">
@@ -300,7 +309,7 @@
             </div>
         </div>
     </section>
-    <footer class="footer" id="footer">
+    <footer class="footer none" id="footer">
         <div class="container">
             <div class="footer__wrapper">
                 <div class="footer__logo">КнигаКит</div>

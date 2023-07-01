@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,500;0,800;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,500;0,600;0,800;1,300&display=swap');
 
 @import 'variables';
 @import 'mixins';
@@ -6,10 +6,7 @@
 
 * {
     font-family: 'Raleway', sans-serif;
-
-    margin: 0;
-    padding: 0;
-    border: 0;
+    box-sizing: border-box;
 
     ::-webkit-scrollbar {
         width: 10px;
@@ -21,7 +18,7 @@
     }
       
     ::-webkit-scrollbar-thumb {
-        background-color: $main-color;
+        background-color: #371ED3;
     }
 }
 
@@ -31,10 +28,11 @@ html {
 
 .container {
     position: relative;
-    max-width: 1190px;
+    max-width: 1200px;
     height: 100%;
     margin: 0 auto;
-    padding: 0 25px;
+    padding: 0 50px;
+    z-index: 1;
 }
 
 .hidden {

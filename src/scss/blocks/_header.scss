@@ -1,5 +1,5 @@
 .header {
-    padding-top: 40px;
+    padding-top: 30px;
     &__wrapper {
         display: flex;
         justify-content: space-between;
@@ -7,26 +7,28 @@
     }
     &__logo {
         z-index: 3;
-        font-style: normal;
+        font-size: 25px;
         font-weight: 800;
-        font-size: 40px;
-        line-height: 47px;
-        color: #FFFFFF;
+        color: var(--blue-color);
         text-decoration: none;
+        span {
+            color: var(--dark-blue-color);
+        }
     }
     &__list {
+        margin: 0;
+        padding: 0;
         display: flex;
         align-items: center;
-        column-gap: 50px;
+        column-gap: 27px;
         list-style-type: none;
     }
     &__link {
         position: relative;
-        font-weight: 500;
-        font-size: 24px;
-        line-height: 28px;
+        color: var(--blue-color);
         text-align: center;
-        color: #FFFFFF;
+        font-size: 20px;
+        font-weight: 600;
         text-decoration: none;
         &::before {
             content: '';
@@ -34,35 +36,22 @@
             left: 0;
             position: absolute;
             width: 0%;
-            height: 3px;
-            background-color: #FFFFFF;
+            height: 2.5px;
+            background-color: var(--blue-color);
             transition: 0.4s;
         }
         &:hover::before {
             width: 100%;
         }
     }
-    &__button {
+    &__stores {
         display: flex;
-        justify-content: center;
-        align-items: center;
-
-        padding: 18px 5px;
-        width: 261px;
-        border: 3px solid #FFFFFF;
-        border-radius: 20px;
-        background: rgba(#FFFFFF, 0);
-
-        font-weight: 800;
-        font-size: 24px;
-        line-height: 28px;
-        color: #FFFFFF;
-        text-align: center;
-        text-decoration: none;
-        &:hover {
-            background: rgba(#FFFFFF, 1);
-            color: #0D2A7D;
-            transition: 0.4s;
+        column-gap: 10px;
+    }
+    &__button {
+        width: 134px;
+        img {
+            width: 100%;
         }
     }
     &__menu-button {
@@ -77,7 +66,7 @@
             height: 2px;
             width: 85%;
             border-radius: 14px;
-            background-color: #FFFFFF;
+            background-color: var(--dark-blue-color);
             transition: all .5s ease;
             &:nth-child(2) {
                 width: 100%;
