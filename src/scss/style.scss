@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,500;0,600;0,800;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,800;1,300&display=swap');
 
 @import 'variables';
 @import 'mixins';
@@ -43,12 +43,12 @@ html {
     display: none;
 }
 
+@import 'blocks/title';
+@import 'blocks/subtitle';
 @import 'blocks/promo';
 @import 'blocks/header';
 @import 'blocks/bubbles';
 @import 'blocks/about';
-@import 'blocks/title';
-@import 'blocks/subtitle';
 @import 'blocks/stories';
 @import 'blocks/approve';
 @import 'blocks/playtest';

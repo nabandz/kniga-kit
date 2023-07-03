@@ -45,12 +45,6 @@
         }
     }
     .about {
-        &__subtitle {
-            margin-top: 10px;
-        }
-        &__wrapper {
-            margin-top: 25px;
-        }
         &-item {
             &__title {
                 font-size: 22px;
@@ -106,13 +100,8 @@
             line-height: normal;
         }
     }
-    .title {
-        font-size: 55px;
-        line-height: normal;
-    }
     .subtitle {
         font-size: 22px;
-        line-height: normal;
     }
 }
 @media (max-width: 992px) {
@@ -185,20 +174,15 @@
         }
     }
     .about {
-        &__subtitle {
-            margin-top: 10px;
-        }
         &__wrapper {
-            margin-top: 25px;
-            grid-template-columns: repeat(auto-fill, 340px);
-            gap: 25px;
+            grid-template-columns: repeat(2, auto);
         }
         &-item {
             &__title {
-                font-size: 22px;
+                font-size: 20px;
             }
-            &__wrapper {
-                grid-template-columns: 110px 210px;
+            &__description {
+                font-size: 17px;
             }
         }
     }
@@ -256,7 +240,10 @@
         }
     }
     .title {
-        font-size: 50px;
+        font-size: 55px;
+    }
+    .subtitle {
+        font-size: 20px;
     }
 }
 @media (max-width: 768px) {
@@ -286,8 +273,8 @@
     .bg-elements {
         &__whale {
             top: 395px;
-            right: -12px;
-            width: 340px;
+            right: 0px;
+            width: 330px;
         }
         &__square {
             width: 230px;
@@ -321,13 +308,8 @@
         }
     }
     .about {
-        &-elements {
-            &__fish {
-                &_white {
-                    top: 150px;
-                }
-            }
-        
+        &__wrapper {
+            grid-template-columns: auto;
         }
     }
     .stories {
@@ -508,21 +490,12 @@
     .about {
         &__subtitle {
             margin-top: 10px;
+            line-height: normal;
         }
         &__wrapper {
-            margin-top: 35px;
-            grid-template-columns: repeat(auto-fill, 270px);
-            gap: 25px;
+            row-gap: 15px;
         }
         &-item {
-            row-gap: 10px;
-            &__wrapper {
-                grid-template-columns: 85px 170px;
-                column-gap: 15px;
-            }
-            &__picture {
-                padding: 10px;
-            }
             &__title {
                 font-size: 17px;
                 line-height: normal;
@@ -531,18 +504,6 @@
                 font-size: 15px;
                 line-height: normal;
             }
-        }
-        &-elements {
-            &__fish {
-                &_red {
-                    top: -35px;
-                }
-                &_white {
-                    top: auto;
-                    bottom: -75px;
-                }
-            }
-        
         }
     }
     .stories {
