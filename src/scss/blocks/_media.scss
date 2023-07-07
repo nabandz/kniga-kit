@@ -63,6 +63,10 @@
         }
     }
     .approve {
+        &__container {
+            max-width: 730px;
+            min-height: 400px;
+        }
         &__name {
             font-size: 22px;
         }
@@ -212,9 +216,6 @@
         }
     }
     .approve {
-        &__container {
-            grid-template-columns: 450px 200px;
-        }
         &__link {
             font-size: 17px;
         }
@@ -222,8 +223,17 @@
             width: 17px;
         }
         &__container {
-            max-width: 575px;
-            min-height: 380px;
+            max-width: 495px;
+            min-height: 450px;
+        }
+        &__name {
+            font-size: 20px;
+        }
+        &__prof {
+            font-size: 20px;
+        }
+        &__text {
+            font-size: 17px;
         }
     }
     .playtest {
@@ -356,16 +366,11 @@
     }
     .approve {
         &__container {
-            display: flex;
-            flex-direction: column;
+            width: 100%;
+            min-height: 450px;
         }
-        &__social {
-            margin-top: 10px;
-            justify-content: start;
-        }
-        &__container {
-            max-width: 375px;
-            min-height: 480px;
+        &__button {
+            display: none;
         }
     }
     .playtest {
@@ -461,6 +466,10 @@
             left: 25px;
             bottom: 25px;
             justify-content: start;
+        }
+        &__social {
+            width: 25px;
+            height: 25px;
         }
     }
     .bg-elements {
@@ -571,40 +580,23 @@
         }
     }
     .approve {
-        &__name {
-            font-size: 17px;
-            line-height: normal;
-        }
-        &__prof {
-            font-size: 17px;
-            line-height: normal;
+        &__container {
+            min-height: 580px;
         }
         &__link {
             font-size: 15px;
-            line-height: normal;
+        }
+        &__icon {
+            width: 15px;
+        }
+        &__name {
+            font-size: 17px;
+        }
+        &__prof {
+            font-size: 17px;
         }
         &__text {
             font-size: 15px;
-            line-height: normal;
-        }
-        &__social {
-            position: absolute;
-            bottom: 15px;
-        }
-        &__container {
-            padding: 15px;
-            max-width: 180px;
-            min-height: 580px;
-        }
-        &__button {
-            width: 40px;
-            height: 40px;
-            &_prev {
-                left: 0px;
-            }
-            &_next {
-                right: 0px;;
-            }
         }
     }
     .playtest {
