@@ -1,13 +1,21 @@
 .footer {
-    padding: 50px 0;
-    background: #371ED3;
+    padding: 50px 0 25px;
+    background: var(--dark-blue-color);
+    position: relative;
+    &::before {
+        content: '';
+        position: absolute;
+        background: url("../img/bg-elements/white-layer-2.svg") top/contain no-repeat;
+        left: 0;
+        top: -1px;
+        width: 100%;
+        height: 100%;
+    }
     &__wrapper {
-        display: grid;
-        grid-template-columns: 1fr 2fr;
-        grid-template-rows: repeat(2, 1fr);
+        margin-top: 20px;
+        display: flex;
         justify-content: space-between;
         align-items: center;
-        row-gap: 25px;
     }
     &__logo {
         position: relative;
@@ -26,6 +34,8 @@
         }
     }
     &__info {
+        margin: 0;
+        padding: 0;
         display: flex;
         flex-direction: column;
         row-gap: 15px;
@@ -55,7 +65,7 @@
     }
     &__socials {
         display: flex;
-        column-gap: 25px;
+        column-gap: 15px;
         justify-content: end;
     }
     &__description {
@@ -79,11 +89,11 @@
         column-gap: 25px;
     }
     &__button {
-        height: 45px;
+        width: 134px;
         background: rgba(0, 0, 0, 0);
         cursor: pointer;
         img {
-            height: 100%;
+            width: 100%;
         }
     }
 }

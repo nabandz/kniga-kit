@@ -290,10 +290,10 @@
         }
     }
     .footer {
-        &__wrapper {
-            column-gap: 25px;
+        &__link {
+            font-size: 17px;
         }
-        &__socials {
+        &__store {
             column-gap: 15px;
         }
     }
@@ -470,7 +470,8 @@
     }
     .footer {
         &__wrapper {
-            grid-template-columns: 1fr;
+            flex-direction: column;
+            row-gap: 25px;
         }
         &__logo {
             text-align: center;
@@ -485,9 +486,6 @@
         }
         &__info {
             text-align: center;
-        }
-        &__link {
-            font-size: 22px;
         }
         &__store {
             justify-content: center;
@@ -736,30 +734,14 @@
     }
     .footer {
         &__wrapper {
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            row-gap: 20px;
-        }
-        &__info {
-            li {
-                text-align: center;
-            }
+            row-gap: 15px;
         }
         &__link {
             font-size: 15px;
         }
-        &__description {
-            font-size: 17px;
-        }
         &__social {
             width: 25px;
             height: 25px;
-        }
-        &__store {
-            flex-direction: row;
-            justify-content: center;
-            column-gap: 10px;
         }
     }
     .policy {
