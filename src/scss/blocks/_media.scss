@@ -82,6 +82,31 @@
             font-size: 16px;
         }
     }
+    .try-app {
+        &-elements {
+            &__whale {
+                top: 217px;
+                left: 62px;
+                width: 205px;
+            }
+            &__fish {
+                &_red {
+                    &:nth-child(1) {
+                        top: 252px;
+                        right: 189px;
+                    }
+                    &:nth-child(2) {
+                        top: 310px;
+                        right: 142px;
+                    }
+                }
+                &_yellow {
+                    top: 332px;
+                    right: 76px;
+                }
+            }
+        }
+    }
     .footer {
         &__description {
             font-size: 22px;
@@ -240,6 +265,30 @@
             font-size: 16px;
         }
     }
+    .try-app {
+        &-elements {
+            &__whale {
+                display: none;
+            }
+            &__fish {
+                &_red {
+                    &:nth-child(1) {
+                        top: 100px;
+                        width: 45px;
+                        right: 189px;
+                    }
+                    &:nth-child(2) {
+                        top: 130px;
+                        right: 142px;
+                    }
+                }
+                &_yellow {
+                    top: 150px;
+                    right: 76px;
+                }
+            }
+        }
+    }
     .footer {
         &__wrapper {
             column-gap: 25px;
@@ -377,6 +426,46 @@
         }
         &__prof {
             font-size: 16px;
+        }
+    }
+    .try-app {
+        &__item {
+            padding: 0;
+            max-width: 175px;
+            background: none;
+        }
+        &__google-play {
+            content: url('../../img/icons/google-play.png');
+        }
+        &__app-store {
+            content: url('../../img/icons/app-store.png');
+        }
+        &__store {
+            display: none;
+        }
+        .try-app {
+            &-elements {
+                &__whale {
+                    display: none;
+                }
+                &__fish {
+                    &_red {
+                        &:nth-child(1) {
+                            top: 80px;
+                            width: 45px;
+                            right: 189px;
+                        }
+                        &:nth-child(2) {
+                            top: 110px;
+                            right: 142px;
+                        }
+                    }
+                    &_yellow {
+                        top: 130px;
+                        right: 76px;
+                    }
+                }
+            }
         }
     }
     .footer {
@@ -609,13 +698,40 @@
         }
     }
     .try-app {
-        &__store {
-            flex-direction: column;
-            align-items: center;
-            row-gap: 10px;
+        &__wrapper {
+            padding: 25px;
         }
-        &__button {
-            height: 50px;
+        &__stores {
+            column-gap: 15px;
+        }
+        &__item {
+            max-width: 140px;
+        }
+        .try-app {
+            &-elements {
+                &__whale {
+                    display: none;
+                }
+                &__fish {
+                    &_red {
+                        &:nth-child(1) {
+                            top: 35px;
+                            width: 35px;
+                            right: 32px;
+                        }
+                        &:nth-child(2) {
+                            top: 73px;
+                            width: 25px;
+                            right: 70px;
+                        }
+                    }
+                    &_yellow {
+                        top: 88px;
+                        width: 35px;
+                        right: 26px;
+                    }
+                }
+            }
         }
     }
     .footer {
