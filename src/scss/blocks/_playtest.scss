@@ -1,8 +1,25 @@
 .playtest {
-    padding: 50px 0;
-    background: url(../img/Background-line.svg) top (center/cover) no-repeat;
+    padding: 50px 0 75px 0;
+    position: relative;
+    &::before {
+        content: '';
+        position: absolute;
+        background: url("../img/bg-elements/dark-blue-layer-3.svg") top/contain no-repeat;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        background: url("../img/bg-elements/blue-layer-3.svg") bottom/contain no-repeat;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+    }
     &__wrapper {
-        margin-top: 25px;
         vertical-align: top;
         overflow: hidden;
     }
