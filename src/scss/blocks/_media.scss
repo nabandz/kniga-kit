@@ -61,13 +61,6 @@
                 min-width: 520px
             }
         }
-        &-elements {
-            &__ship {
-                top: 19px;
-                right: 32px;
-                width: 179px;
-            }
-        }
     }
     .approve {
         &__name {
@@ -174,9 +167,6 @@
         }
     }
     .about {
-        &__wrapper {
-            grid-template-columns: repeat(2, auto);
-        }
         &-item {
             &__title {
                 font-size: 20px;
@@ -200,10 +190,24 @@
             }
         }
         &-elements {
-            &__ship {
-                top: 111px;
-                right: 32px;
-                width: 88px;
+            &__fish {
+                &_red {
+                    &:nth-child(1) {
+                        width: 39px;
+                        top: 9px;
+                        left: 136px;
+                    }
+                    &:nth-child(2) {
+                        width: 57px;
+                        top: 34px;
+                        left: 79px;
+                    }
+                }
+                &_yellow {
+                    top: 14px;
+                    left: 20px;
+                    width: 54px;
+                }
             }
         }
     }
@@ -329,7 +333,25 @@
             }
         }
         &-elements {
-            display: none;
+            &__fish {
+                &_red {
+                    &:nth-child(1) {
+                        width: 39px;
+                        top: 159px;
+                        left: 136px;
+                    }
+                    &:nth-child(2) {
+                        width: 57px;
+                        top: 184px;
+                        left: 79px;
+                    }
+                }
+                &_yellow {
+                    top: 164px;
+                    left: 20px;
+                    width: 54px;
+                }
+            }
         }
     }
     .approve {
@@ -384,10 +406,13 @@
             justify-content: center;
         }
     }
+    .title {
+        font-size: 50px;
+    }
 }
 @media (max-width: 576px) {
     .container {
-        padding: 15px;
+        padding: 0 15px;
     }
     .header {
         &__list {
@@ -523,6 +548,27 @@
                 min-width: 255px;
             }
         }
+        &-elements {
+            &__fish {
+                &_red {
+                    &:nth-child(1) {
+                        width: 27px;
+                        top: 80px;
+                        left: 100px;
+                    }
+                    &:nth-child(2) {
+                        width: 40px;
+                        top: 95px;
+                        left: 58px;
+                    }
+                }
+                &_yellow {
+                    top: 90px;
+                    left: 18px;
+                    width: 40px;
+                }
+            }
+        }
     }
     .approve {
         &__name {
@@ -613,7 +659,7 @@
         }
     }
     .title {
-        font-size: 35px;
+        font-size: 30px;
         line-height: normal;
     }
     .subtitle {
