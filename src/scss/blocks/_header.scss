@@ -1,5 +1,12 @@
 .header {
-    padding-top: 30px;
+    padding: 25px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--light-blue-color);
+    z-index: 10;
+    transition: 0.4s;
     &__wrapper {
         display: flex;
         justify-content: space-between;
@@ -82,5 +89,8 @@
                 }
             }
         }
+    }
+    &_active {
+        box-shadow: 0 2px 25px rgb(37 37 37 / 35%);
     }
 }

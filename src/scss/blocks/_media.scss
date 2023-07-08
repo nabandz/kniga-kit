@@ -293,9 +293,6 @@
         &__link {
             font-size: 17px;
         }
-        &__store {
-            column-gap: 15px;
-        }
     }
     .title {
         font-size: 55px;
@@ -509,8 +506,8 @@
     }
     .promo {
         &__wrapper {
+            padding-top: 210px;
             margin: 0 auto;
-            margin-top: 140px;
             justify-content: center;
             align-items: center;
             text-align: center;
