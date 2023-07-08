@@ -98,15 +98,18 @@
     &__social {
         width: 35px;
         height: 35px;
+        transition: 0.4s;
         img {
             width: 100%;
+        }
+        &:hover {
+            transform: translateY(-5px);
         }
     }
     &-elements {
         z-index: -3;
         position: absolute;
         width: 100%;
-        height: 100%;
         top: 0;
         left: 0;
         &__whale {
@@ -134,23 +137,36 @@
             border-radius: 35px;
             top: 274px;
             right: 165px;
+            transition: .4s;
             &:nth-child(1) {
                 position: absolute;
                 transform: rotate(51.74deg);
                 background: var(--blue-color);
                 z-index: 1;
+                &:hover {	
+                    transform: scale(1.1) rotate(55.74deg);
+                }
             }
             &:nth-child(2) {
                 position: absolute;
                 transform: rotate(41.74deg);
                 background: var(--dark-blue-color);
                 z-index: 1;
+                &:hover {	
+                    transform: scale(1.1) rotate(45.74deg);
+                }
             }
             &:nth-child(3) {
                 position: absolute;
                 transform: rotate(31.74deg);
                 background: url("../../img/sea-bg.jpg") center center/cover no-repeat;
                 z-index: 1;
+                &:hover {	
+                    transform: scale(1.1) rotate(35.74deg);
+                }
+            }
+            &:hover {	
+                transform: scale(1.1) rotate(55.74deg);
             }
         }
         &__fishs {

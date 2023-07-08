@@ -71,8 +71,12 @@
     &__social {
         width: 35px;
         height: 35px;
+        transition: 0.4s;
         img {
             width: 100%;
+        }
+        &:hover {
+            transform: translateY(-5px);
         }
     }
     &__stores {
