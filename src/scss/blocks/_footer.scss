@@ -23,11 +23,11 @@
         font-weight: 800;
         font-size: 30px;
         line-height: 35px;
-        color: #FFFFFF;
+        color: var(--light-color);
         &::after {
             content: '';
             position: absolute;
-            background-color: #FFFFFF;
+            background-color: var(--light-color);
             width: 150px;
             height: 3px;
             left: 0;
@@ -47,7 +47,7 @@
         font-weight: 800;
         font-size: 20px;
         line-height: 23px;
-        color: #FFFFFF;
+        color: var(--light-color);
         text-decoration: none;
         &::before {
             content: '';
@@ -56,7 +56,7 @@
             position: absolute;
             width: 0%;
             height: 2px;
-            background-color: #FFFFFF;
+            background-color:var(--light-color);
             transition: 0.4s;
         }
         &:hover::before {
@@ -68,13 +68,6 @@
         column-gap: 15px;
         justify-content: end;
     }
-    &__description {
-        font-weight: 800;
-        font-size: 24px;
-        line-height: 28px;
-
-        color: #FFFFFF;
-    }
     &__social {
         width: 35px;
         height: 35px;
@@ -82,7 +75,7 @@
             width: 100%;
         }
     }
-    &__store {
+    &__stores {
         display: flex;
         justify-content: end;
         align-items: center;

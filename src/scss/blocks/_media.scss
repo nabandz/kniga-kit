@@ -35,13 +35,13 @@
         &__socials {
             bottom: 50px;
         }
-    }
-    .bg-elements {
-        &__whale {
-            right: 25px;
-        }
-        &__square {
-            right: 115px;
+        &-elements {
+            &__whale {
+                right: 25px;
+            }
+            &__square {
+                right: 115px;
+            }
         }
     }
     .about {
@@ -177,18 +177,18 @@
         &__socials {
             bottom: 25px;
         }
-    }
-    .bg-elements {
-        &__whale {
-            top: 305px;
-            right: 0px;
-            width: 350px;
-        }
-        &__square {
-            width: 245px;
-            height: 245px;
-            top: 332px;
-            right: 62px;
+        &-elements {
+            &__whale {
+                top: 305px;
+                right: 5px;
+                width: 340px;
+            }
+            &__square {
+                width: 245px;
+                height: 245px;
+                top: 332px;
+                right: 62px;
+            }
         }
     }
     .about {
@@ -303,6 +303,9 @@
 }
 @media (max-width: 768px) {
     .promo {
+        &__wrapper {
+            padding-top: 215px;
+        }
         &__stores {
             flex-direction: column;
             row-gap: 15px;
@@ -324,41 +327,41 @@
         &__app-store {
             content: url('../../img/icons/app-store.png');
         }
-    }
-    .bg-elements {
-        &__whale {
-            top: 395px;
-            right: 0px;
-            width: 330px;
-        }
-        &__square {
-            width: 230px;
-            height: 230px;
-            top: 424px;
-            right: 60px;
-        }
-        &__fish {
-            &_blue {
-                top: 153px;
-                right: 139px;
+        &-elements {
+            &__whale {
+                top: 395px;
+                right: 5px;
+                width: 320px;
             }
-            &_red {
-                &:nth-child(1) {
-                    top: 94px;
-                    right: 194px;
+            &__square {
+                width: 230px;
+                height: 230px;
+                top: 424px;
+                right: 60px;
+            }
+            &__fish {
+                &_blue {
+                    top: 153px;
+                    right: 139px;
                 }
-                &:nth-child(2) {
-                    top: 767px;
-                    right: 85px;
+                &_red {
+                    &:nth-child(1) {
+                        top: 94px;
+                        right: 194px;
+                    }
+                    &:nth-child(2) {
+                        top: 767px;
+                        right: 85px;
+                    }
                 }
-            }
-            &_yellow {
-                top: 146px;
-                right: 67px;
-            }
-            &_white {
-                top: 702px;
-                right: 130px;
+                &_yellow {
+                    top: 146px;
+                    right: 67px;
+                }
+                &_white {
+                    top: 702px;
+                    right: 130px;
+                }
             }
         }
     }
@@ -388,17 +391,17 @@
                 &_red {
                     &:nth-child(1) {
                         width: 39px;
-                        top: 159px;
+                        top: 129px;
                         left: 136px;
                     }
                     &:nth-child(2) {
                         width: 57px;
-                        top: 184px;
+                        top: 154px;
                         left: 79px;
                     }
                 }
                 &_yellow {
-                    top: 164px;
+                    top: 134px;
                     left: 20px;
                     width: 54px;
                 }
@@ -484,7 +487,7 @@
         &__info {
             text-align: center;
         }
-        &__store {
+        &__stores {
             justify-content: center;
         }
     }
@@ -548,53 +551,58 @@
             width: 25px;
             height: 25px;
         }
-    }
-    .bg-elements {
-        overflow: hidden;
-        &__whale {
-            top: 393px;
-            width: 290px;
-            left: 0;
-            transform: translateX(-50%);
-            margin: 0 auto;
-        }
-        &__square {
-            width: 220px;
-            height: 220px;
-            top: 408px;
-            left: 50%;
-            &:nth-child(1) {
-                transform: translateX(-50%) rotate(51.74deg);
+        &-elements {
+            overflow: hidden;
+            &__whale {
+                top: 393px;
+                width: 290px;
+                left: 0;
+                transform: translateX(-50%);
+                margin: 0 auto;
             }
-            &:nth-child(2) {
-                transform: translateX(-50%) rotate(41.74deg);
-            }
-            &:nth-child(3) {
-                transform: translateX(-50%) rotate(31.74deg);
-            }
-        }
-        &__fish {
-            &_blue {
-                top: 148px;
-                right: 84px;
-            }
-            &_red {
+            &__square {
+                width: 220px;
+                height: 220px;
+                top: 408px;
+                left: 50%;
                 &:nth-child(1) {
-                    top: 90px;
-                    right: 128px;
+                    transform: translateX(-50%) rotate(51.74deg);
                 }
                 &:nth-child(2) {
-                    top: 819px;
-                    right: 22px;
+                    transform: translateX(-50%) rotate(41.74deg);
+                }
+                &:nth-child(3) {
+                    transform: translateX(-50%) rotate(31.74deg);
                 }
             }
-            &_yellow {
-                top: 146px;
-                right: 22px;
-            }
-            &_white {
-                top: 762px;
-                right: 76px;
+            &__fish {
+                &_blue {
+                    width: 45px;
+                    top: 148px;
+                    right: 84px;
+                }
+                &_red {
+                    &:nth-child(1) {
+                        width: 55px;
+                        top: 90px;
+                        right: 128px;
+                    }
+                    &:nth-child(2) {
+                        width: 52px;
+                        top: 819px;
+                        right: 22px;
+                    }
+                }
+                &_yellow {
+                    width: 50px;
+                    top: 146px;
+                    right: 22px;
+                }
+                &_white {
+                    width: 70px;
+                    top: 762px;
+                    right: 76px;
+                }
             }
         }
     }
@@ -635,7 +643,8 @@
             }
         }
         &-elements {
-            &__fish {
+            display: none;
+            /* &__fish {
                 &_red {
                     &:nth-child(1) {
                         width: 27px;
@@ -653,7 +662,7 @@
                     left: 18px;
                     width: 40px;
                 }
-            }
+            } */
         }
     }
     .approve {
@@ -685,6 +694,9 @@
         }
     }
     .team {
+        &__wrapper {
+            gap: 15px;
+        }
         &__name {
             font-size: 17px;
         }

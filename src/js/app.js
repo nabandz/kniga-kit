@@ -5,5 +5,5 @@ import * as headerFunction from "./modules/header.js"
 
 flsFunctions.isWebp();
 silderFunction.slider();
-menuFunction.menu();
+menuFunction.mobileMenu();
 headerFunction.headerActive();

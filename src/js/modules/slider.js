@@ -1,7 +1,7 @@
 import Swiper from "swiper/bundle";
 
 export function slider() {
-    //Slider - section Stories
+    //Slider - section 'Storie'
     const swiperStories = new Swiper(".stories__slider", {
         loop: true,
         effect: "fade",
@@ -12,7 +12,7 @@ export function slider() {
         },
     });
 
-    //Slider - section Approve
+    //Slider - section 'Approve'
     const swiperApprove = new Swiper(".approve__slider", {
         loop: true,
         mousewheel: true,

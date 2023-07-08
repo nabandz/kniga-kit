@@ -100,158 +100,107 @@
         height: 35px;
         img {
             width: 100%;
-        }        
+        }
     }
-}
-.bg-elements {
-    z-index: -3;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    &__whale {
+    &-elements {
+        z-index: -3;
         position: absolute;
-        top: 246px;
-        right: 85px;
-        width: 480px;
-        animation: swim 12s infinite alternate ease-in-out;
-        z-index: 5;
-        img {
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        &__whale {
+            position: absolute;
+            top: 246px;
+            right: 85px;
+            width: 480px;
+            animation: swim 12s infinite alternate ease-in-out;
+            z-index: 5;
+            img {
+                width: 100%;
+            }
+        }
+        &__squares {
+            position: absolute;
             width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -3;
         }
-    }
-    &__squares {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        z-index: -3;
-    }
-    &__square {
-        width: 345px;
-        height: 345px;
-        border-radius: 35px;
-        top: 274px;
-        right: 165px;
-        &:nth-child(1) {
-            position: absolute;
-            transform: rotate(51.74deg);
-            background: var(--blue-color);
-            z-index: 1;
-        }
-        &:nth-child(2) {
-            position: absolute;
-            transform: rotate(41.74deg);
-            background: var(--dark-blue-color);
-            z-index: 1;
-        }
-        &:nth-child(3) {
-            position: absolute;
-            transform: rotate(31.74deg);
-            background: url("../../img/sea-bg.jpg") center center/cover no-repeat;
-            z-index: 1;
-        }
-    }
-    &__fishs {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        z-index: -3;
-    }
-    &__fish {
-        animation: swim 10s infinite alternate ease-in-out;
-        &_red {
+        &__square {
+            width: 345px;
+            height: 345px;
+            border-radius: 35px;
+            top: 274px;
+            right: 165px;
             &:nth-child(1) {
                 position: absolute;
-                width: 73px;
-                top: 157px;
-                right: 194px;
-                animation-duration:8s;
+                transform: rotate(51.74deg);
+                background: var(--blue-color);
+                z-index: 1;
             }
             &:nth-child(2) {
                 position: absolute;
-                width: 61px;
-                top: 701px;
-                right: 85px;
-                animation-duration:6s;
+                transform: rotate(41.74deg);
+                background: var(--dark-blue-color);
+                z-index: 1;
+            }
+            &:nth-child(3) {
+                position: absolute;
+                transform: rotate(31.74deg);
+                background: url("../../img/sea-bg.jpg") center center/cover no-repeat;
+                z-index: 1;
             }
         }
-        &_blue {
+        &__fishs {
             position: absolute;
-            top: 221px;
-            right: 152px;
-            rotate: 352deg;
-            width: 56px;
-            animation-duration:7s;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -3;
         }
-        &_yellow {
-            position: absolute;
-            top: 219px;
-            right: 67px;
-            width: 60px;
-            animation-duration:8s;
+        &__fish {
+            animation: swim 10s infinite alternate ease-in-out;
+            &_red {
+                &:nth-child(1) {
+                    position: absolute;
+                    width: 73px;
+                    top: 157px;
+                    right: 194px;
+                    animation-duration:8s;
+                }
+                &:nth-child(2) {
+                    position: absolute;
+                    width: 61px;
+                    top: 701px;
+                    right: 85px;
+                    animation-duration:6s;
+                }
+            }
+            &_blue {
+                position: absolute;
+                top: 221px;
+                right: 152px;
+                rotate: 352deg;
+                width: 56px;
+                animation-duration:7s;
+            }
+            &_yellow {
+                position: absolute;
+                top: 219px;
+                right: 67px;
+                width: 60px;
+                animation-duration:8s;
+            }
+            &_white {
+                position: absolute;
+                top: 641px;
+                right: 130px;
+                width: 80px;
+                animation-duration:5s;
+            }
         }
-        &_white {
-            position: absolute;
-            top: 641px;
-            right: 130px;
-            width: 80px;
-            animation-duration:5s;
-        }
-    }
-}
-
-@keyframes upDown {
-    from {
-        bottom: 50px;
-    }
-    to {
-        bottom: 25px;
-    }
-}
-
-@keyframes drawing {
-    0% { 
-        transform: translateX(0%) rotate(15deg);
-    }
-    30% { 
-        transform: translateX(10%) rotateZ(5deg);
-    }
-    60% { 
-        transform: translateX(20%) rotateZ(15deg);
-    }
-    70% { 
-        transform: translateX(30%) rotateZ(5deg);
-    }
-    80% { 
-        transform: translateX(40%);
-    }
-    90% { 
-        transform: translateX(45%);
-    }
-    100% { 
-        transform: translateX(50%);
-    }
-}
-
-@keyframes swim {
-    0% {
-        transform: translateY(0) rotate(-2deg);
-    }
-    25% {
-        transform: translateY(-10px) rotate(2deg);
-    }
-    50% {
-        transform: translateY(0) rotate(-2deg);
-    }
-    75% {
-        transform: translateY(-10px) rotate(2deg);
-    }
-    100% {
-        transform: translateY(0) rotate(-2deg);
     }
 }

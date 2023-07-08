@@ -1,4 +1,4 @@
-export function menu () {
+export function mobileMenu () {
     //Menu
     const mobileMenu = document.querySelector('.header__nav'),
           menuLinks = document.querySelectorAll('.header__link'),
