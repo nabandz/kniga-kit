@@ -1,85 +1,85 @@
 .try-app {
-    padding: 25px 0;
-    position: relative;
-    &__wrapper {
-        background: url('../../img/sea-bg.jpg') center (top/cover) no-repeat;
-        background-attachment: fixed;
-        width: 100%;
-        margin: 0 auto;
-        padding: 25px 50px;
-        border-radius: 35px;
+  padding: 25px 0;
+  position: relative;
+  &__wrapper {
+    background: url("../../img/sea-bg.jpg") center (top/cover) no-repeat;
+    background-attachment: fixed;
+    width: 100%;
+    margin: 0 auto;
+    padding: 25px 50px;
+    border-radius: 35px;
+  }
+  &__title {
+    text-align: start;
+  }
+  &__stores {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    column-gap: 25px;
+  }
+  &__item {
+    z-index: 2;
+    padding: 15px;
+    width: 200px;
+    border-radius: 25px;
+    background: var(--light-color);
+    transition: 0.4s;
+    &:hover {
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
     }
-    &__title {
-        text-align: start;
+  }
+  &__store {
+    margin-top: 10px;
+    color: var(--dark-text-color);
+    text-align: center;
+    font-size: 25px;
+    font-weight: 700;
+  }
+  &__button {
+    width: 100%;
+    img {
+      display: block;
+      width: 100%;
     }
-    &__stores {
-        margin-top: 25px;
-        display: flex;
-        justify-content: center;
-        column-gap: 25px;
+  }
+  &-elements {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    &__whale {
+      animation: swim-horizontal 12s infinite alternate ease-in-out;
+      position: absolute;
+      top: 217px;
+      left: 86px;
+      width: 240px;
     }
-    &__item {
-        z-index: 2;
-        padding: 15px;
-        width: 200px;
-        border-radius: 25px;
-        background: var(--light-color);
-        transition: 0.4s;
-        &:hover {
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
+    &__fish {
+      animation: swim 10s infinite alternate ease-in-out;
+      &_red {
+        &:nth-child(1) {
+          position: absolute;
+          width: 65px;
+          top: 252px;
+          right: 259px;
+          animation-duration: 8s;
         }
-    }
-    &__store {
-        margin-top: 10px;
-        color: var(--dark-text-color);
-        text-align: center;
-        font-size: 25px;
-        font-weight: 700;
-    }
-    &__button {
-        width: 100%;
-        img {
-            display: block;
-            width: 100%;
+        &:nth-child(2) {
+          position: absolute;
+          width: 55px;
+          top: 310px;
+          right: 212px;
+          animation-duration: 6s;
         }
-    }
-    &-elements {
+      }
+      &_yellow {
         position: absolute;
-        width: 100%;
-        top: 0;
-        left: 0;
-        &__whale {
-            animation: swim-horizontal 12s infinite alternate ease-in-out;
-            position: absolute;
-            top: 217px;
-            left: 86px;
-            width: 240px;
-        }
-        &__fish {
-            animation: swim 10s infinite alternate ease-in-out;
-            &_red {
-                &:nth-child(1) {
-                    position: absolute;
-                    width: 65px;
-                    top: 252px;
-                    right: 259px;
-                    animation-duration:8s;
-                }
-                &:nth-child(2) {
-                    position: absolute;
-                    width: 55px;
-                    top: 310px;
-                    right: 212px;
-                    animation-duration:6s;
-                }
-            }
-            &_yellow {
-                position: absolute;
-                top: 332px;
-                right: 146px;
-                width: 60px;
-                animation-duration:8s;
-            }
-        }
+        top: 332px;
+        right: 146px;
+        width: 60px;
+        animation-duration: 8s;
+      }
     }
+  }
 }

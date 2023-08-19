@@ -1,649 +1,649 @@
 @media (max-width: 1200px) {
-    .container {
-        width: 100%;
+  .container {
+    width: 100%;
+  }
+  .header {
+    &__list {
+      column-gap: 15px;
     }
-    .header {
-        &__list {
-            column-gap: 15px;
-        }
-        &__link {
-            font-size: 17px;
-        }
-        &__stores {
-            column-gap: 5px;
-        }
-        &__button {
-            width: 115px;
-        }
+    &__link {
+      font-size: 17px;
     }
-    .promo {
-        &__title {
-            font-size: 85px;
-            line-height: normal;
-        }
-        &__subtitle {
-            font-size: 22px;
-            line-height: normal;
-        }
-        &__description {
-            font-size: 17px;
-            line-height: normal;
-        }
-        &__stores {
-            column-gap: 20px;
-        }
-        &__socials {
-            bottom: 50px;
-        }
-        &-elements {
-            &__whale {
-                right: 25px;
-            }
-            &__square {
-                right: 115px;
-            }
-        }
+    &__stores {
+      column-gap: 5px;
     }
-    .about {
-        &-item {
-            &__title {
-                font-size: 22px;
-            }
-        }
+    &__button {
+      width: 115px;
     }
-    .stories {
-        min-height: 700px;
-        &__slider {
-            max-width: 550px;
-        }
-        &-item {
-            &__picture {
-                min-width: 520px
-            }
-        }
+  }
+  .promo {
+    &__title {
+      font-size: 85px;
+      line-height: normal;
     }
-    .approve {
-        &__container {
-            max-width: 730px;
-            min-height: 400px;
-        }
-        &__name {
-            font-size: 22px;
-        }
-        &__prof {
-            font-size: 22px;
-        }
+    &__subtitle {
+      font-size: 22px;
+      line-height: normal;
     }
-    .team {
-        &__name {
-            font-size: 22px;
-        }
-        &__prof {
-            font-size: 16px;
-        }
+    &__description {
+      font-size: 17px;
+      line-height: normal;
     }
-    .try-app {
-        &-elements {
-            &__whale {
-                top: 217px;
-                left: 62px;
-                width: 205px;
-            }
-            &__fish {
-                &_red {
-                    &:nth-child(1) {
-                        top: 252px;
-                        right: 189px;
-                    }
-                    &:nth-child(2) {
-                        top: 310px;
-                        right: 142px;
-                    }
-                }
-                &_yellow {
-                    top: 332px;
-                    right: 76px;
-                }
-            }
-        }
+    &__stores {
+      column-gap: 20px;
     }
-    .footer {
-        &__description {
-            font-size: 22px;
-        }
+    &__socials {
+      bottom: 50px;
     }
-    .policy {
-        &__text {
-            font-size: 22px;
-            line-height: normal;
-        }
+    &-elements {
+      &__whale {
+        right: 25px;
+      }
+      &__square {
+        right: 115px;
+      }
     }
-    .subtitle {
+  }
+  .about {
+    &-item {
+      &__title {
         font-size: 22px;
+      }
     }
+  }
+  .stories {
+    min-height: 700px;
+    &__slider {
+      max-width: 550px;
+    }
+    &-item {
+      &__picture {
+        min-width: 520px;
+      }
+    }
+  }
+  .approve {
+    &__container {
+      max-width: 730px;
+      min-height: 400px;
+    }
+    &__name {
+      font-size: 22px;
+    }
+    &__prof {
+      font-size: 22px;
+    }
+  }
+  .team {
+    &__name {
+      font-size: 22px;
+    }
+    &__prof {
+      font-size: 16px;
+    }
+  }
+  .try-app {
+    &-elements {
+      &__whale {
+        top: 217px;
+        left: 62px;
+        width: 205px;
+      }
+      &__fish {
+        &_red {
+          &:nth-child(1) {
+            top: 252px;
+            right: 189px;
+          }
+          &:nth-child(2) {
+            top: 310px;
+            right: 142px;
+          }
+        }
+        &_yellow {
+          top: 332px;
+          right: 76px;
+        }
+      }
+    }
+  }
+  .footer {
+    &__description {
+      font-size: 22px;
+    }
+  }
+  .policy {
+    &__text {
+      font-size: 22px;
+      line-height: normal;
+    }
+  }
+  .subtitle {
+    font-size: 22px;
+  }
 }
 @media (max-width: 992px) {
-    .container {
-        max-width: 100%;
+  .container {
+    max-width: 100%;
+  }
+  .header {
+    &__nav {
+      display: flex;
+      align-items: center;
+      z-index: 2;
+      position: fixed;
+      justify-content: center;
+      left: 0;
+      top: -100%;
+      width: 100%;
+      height: 100%;
+      backdrop-filter: blur(5px);
+      transition: all 0.5s ease;
+      &_active {
+        top: 0;
+        background-color: rgba(#dfeafc, 0.95);
+      }
     }
-    .header {
-        &__nav {
-            display: flex;
-            align-items: center;
-            z-index: 2;
-            position: fixed;
-            justify-content: center;
-            left: 0;
-            top: -100%;
-            width: 100%;
-            height: 100%;
-            backdrop-filter: blur(5px);
-            transition: all .5s ease;
-            &_active {
-                top: 0;
-                background-color: rgba(#DFEAFC, 0.95);
-            }
-        }
-        &__list {
-            display: flex;;
-            flex-direction: column;
-            text-align: center;
-            row-gap: 50px;
-        }
-        &__link {
-            font-size: 25px;
-        }
-        &__stores {
-            display: none;
-        }
-        &__menu-button {
-            display: flex;
-        }
+    &__list {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      row-gap: 50px;
     }
-    .promo {
-        &__title {
-            font-size: 75px;
-        }
-        &__subtitle {
-            font-size: 20px;
-        }
-        &__description {
-            font-size: 15px;
-        }
-        &__button{
-            max-width: 170px;
-            max-height: 170px;
-        }
-        &__socials {
-            bottom: 25px;
-        }
-        &-elements {
-            &__whale {
-                top: 305px;
-                right: 5px;
-                width: 340px;
-            }
-            &__square {
-                width: 245px;
-                height: 245px;
-                top: 332px;
-                right: 62px;
-            }
-        }
+    &__link {
+      font-size: 25px;
     }
-    .about {
-        &-item {
-            &__title {
-                font-size: 20px;
-            }
-            &__description {
-                font-size: 17px;
-            }
-        }
+    &__stores {
+      display: none;
     }
-    .stories {
-        min-height: 580px;
-        &__sliders {
-            margin-top: 25px;
-        }
-        &__slider {
-            max-width: 450px;
-        }
-        &-item {
-            &__picture {
-                min-width: 425px;
-            }
-        }
-        &-elements {
-            &__fish {
-                &_red {
-                    &:nth-child(1) {
-                        width: 39px;
-                        top: 9px;
-                        left: 136px;
-                    }
-                    &:nth-child(2) {
-                        width: 57px;
-                        top: 34px;
-                        left: 79px;
-                    }
-                }
-                &_yellow {
-                    top: 14px;
-                    left: 20px;
-                    width: 54px;
-                }
-            }
-        }
+    &__menu-button {
+      display: flex;
     }
-    .approve {
-        &__link {
-            font-size: 17px;
-        }
-        &__icon {
-            width: 17px;
-        }
-        &__container {
-            max-width: 495px;
-            min-height: 450px;
-        }
-        &__name {
-            font-size: 20px;
-        }
-        &__prof {
-            font-size: 20px;
-        }
-        &__text {
-            font-size: 17px;
-        }
+  }
+  .promo {
+    &__title {
+      font-size: 75px;
     }
-    .team {
-        &__name {
-            font-size: 20px;
-        }
-        &__prof {
-            font-size: 16px;
-        }
+    &__subtitle {
+      font-size: 20px;
     }
-    .try-app {
-        &-elements {
-            &__whale {
-                display: none;
-            }
-            &__fish {
-                &_red {
-                    &:nth-child(1) {
-                        top: 100px;
-                        width: 45px;
-                        right: 189px;
-                    }
-                    &:nth-child(2) {
-                        top: 130px;
-                        right: 142px;
-                    }
-                }
-                &_yellow {
-                    top: 150px;
-                    right: 76px;
-                }
-            }
-        }
+    &__description {
+      font-size: 15px;
     }
-    .footer {
-        &__link {
-            font-size: 17px;
-        }
+    &__button {
+      max-width: 170px;
+      max-height: 170px;
     }
-    .title {
-        font-size: 55px;
+    &__socials {
+      bottom: 25px;
     }
-    .subtitle {
+    &-elements {
+      &__whale {
+        top: 305px;
+        right: 5px;
+        width: 340px;
+      }
+      &__square {
+        width: 245px;
+        height: 245px;
+        top: 332px;
+        right: 62px;
+      }
+    }
+  }
+  .about {
+    &-item {
+      &__title {
         font-size: 20px;
+      }
+      &__description {
+        font-size: 17px;
+      }
     }
+  }
+  .stories {
+    min-height: 580px;
+    &__sliders {
+      margin-top: 25px;
+    }
+    &__slider {
+      max-width: 450px;
+    }
+    &-item {
+      &__picture {
+        min-width: 425px;
+      }
+    }
+    &-elements {
+      &__fish {
+        &_red {
+          &:nth-child(1) {
+            width: 39px;
+            top: 9px;
+            left: 136px;
+          }
+          &:nth-child(2) {
+            width: 57px;
+            top: 34px;
+            left: 79px;
+          }
+        }
+        &_yellow {
+          top: 14px;
+          left: 20px;
+          width: 54px;
+        }
+      }
+    }
+  }
+  .approve {
+    &__link {
+      font-size: 17px;
+    }
+    &__icon {
+      width: 17px;
+    }
+    &__container {
+      max-width: 495px;
+      min-height: 450px;
+    }
+    &__name {
+      font-size: 20px;
+    }
+    &__prof {
+      font-size: 20px;
+    }
+    &__text {
+      font-size: 17px;
+    }
+  }
+  .team {
+    &__name {
+      font-size: 20px;
+    }
+    &__prof {
+      font-size: 16px;
+    }
+  }
+  .try-app {
+    &-elements {
+      &__whale {
+        display: none;
+      }
+      &__fish {
+        &_red {
+          &:nth-child(1) {
+            top: 100px;
+            width: 45px;
+            right: 189px;
+          }
+          &:nth-child(2) {
+            top: 130px;
+            right: 142px;
+          }
+        }
+        &_yellow {
+          top: 150px;
+          right: 76px;
+        }
+      }
+    }
+  }
+  .footer {
+    &__link {
+      font-size: 17px;
+    }
+  }
+  .title {
+    font-size: 55px;
+  }
+  .subtitle {
+    font-size: 20px;
+  }
 }
 @media (max-width: 768px) {
-    .promo {
-        &__wrapper {
-            padding-top: 215px;
-        }
-        &__stores {
-            flex-direction: column;
-            row-gap: 15px;
-        }
-        &__item {
-            row-gap: 5px;
-        }
-        &__store {
-            text-align: start;
-            font-size: 25px;
-        }
-        &__button {
-            padding: 0;
-            max-width: 175px;
-        }
-        &__google-play {
-            content: url('../../img/icons/google-play.png');
-        }
-        &__app-store {
-            content: url('../../img/icons/app-store.png');
-        }
-        &-elements {
-            &__whale {
-                top: 395px;
-                right: 5px;
-                width: 320px;
-            }
-            &__square {
-                width: 230px;
-                height: 230px;
-                top: 424px;
-                right: 60px;
-            }
-            &__fish {
-                &_blue {
-                    top: 153px;
-                    right: 139px;
-                }
-                &_red {
-                    &:nth-child(1) {
-                        top: 94px;
-                        right: 194px;
-                    }
-                    &:nth-child(2) {
-                        top: 767px;
-                        right: 85px;
-                    }
-                }
-                &_yellow {
-                    top: 146px;
-                    right: 67px;
-                }
-                &_white {
-                    top: 702px;
-                    right: 130px;
-                }
-            }
-        }
+  .promo {
+    &__wrapper {
+      padding-top: 215px;
     }
-    .about {
-        &__wrapper {
-            grid-template-columns: auto;
-        }
+    &__stores {
+      flex-direction: column;
+      row-gap: 15px;
     }
-    .stories {
-        min-height: 530px;
-        &__slider {
-            max-width: 350px;
-            &_front {
-                top: 50px;
-            }
-        }
-        &-item {
-            &__tablet {
-                width: 100%;
-            }
-            &__picture {
-                min-width: 330px;
-            }
-        }
-        &-elements {
-            &__fish {
-                &_red {
-                    &:nth-child(1) {
-                        width: 39px;
-                        top: 129px;
-                        left: 136px;
-                    }
-                    &:nth-child(2) {
-                        width: 57px;
-                        top: 154px;
-                        left: 79px;
-                    }
-                }
-                &_yellow {
-                    top: 134px;
-                    left: 20px;
-                    width: 54px;
-                }
-            }
-        }
+    &__item {
+      row-gap: 5px;
     }
-    .approve {
-        &__container {
-            width: 100%;
-            min-height: 450px;
-        }
-        &__button {
-            display: none;
-        }
+    &__store {
+      text-align: start;
+      font-size: 25px;
     }
-    .team {
-        &__wrapper {
-            grid-template-columns: 100%;
+    &__button {
+      padding: 0;
+      max-width: 175px;
+    }
+    &__google-play {
+      content: url("../../img/icons/google-play.png");
+    }
+    &__app-store {
+      content: url("../../img/icons/app-store.png");
+    }
+    &-elements {
+      &__whale {
+        top: 395px;
+        right: 5px;
+        width: 320px;
+      }
+      &__square {
+        width: 230px;
+        height: 230px;
+        top: 424px;
+        right: 60px;
+      }
+      &__fish {
+        &_blue {
+          top: 153px;
+          right: 139px;
         }
-        &__name {
-            font-size: 20px;
+        &_red {
+          &:nth-child(1) {
+            top: 94px;
+            right: 194px;
+          }
+          &:nth-child(2) {
+            top: 767px;
+            right: 85px;
+          }
         }
-        &__prof {
-            font-size: 16px;
+        &_yellow {
+          top: 146px;
+          right: 67px;
         }
+        &_white {
+          top: 702px;
+          right: 130px;
+        }
+      }
+    }
+  }
+  .about {
+    &__wrapper {
+      grid-template-columns: auto;
+    }
+  }
+  .stories {
+    min-height: 530px;
+    &__slider {
+      max-width: 350px;
+      &_front {
+        top: 50px;
+      }
+    }
+    &-item {
+      &__tablet {
+        width: 100%;
+      }
+      &__picture {
+        min-width: 330px;
+      }
+    }
+    &-elements {
+      &__fish {
+        &_red {
+          &:nth-child(1) {
+            width: 39px;
+            top: 129px;
+            left: 136px;
+          }
+          &:nth-child(2) {
+            width: 57px;
+            top: 154px;
+            left: 79px;
+          }
+        }
+        &_yellow {
+          top: 134px;
+          left: 20px;
+          width: 54px;
+        }
+      }
+    }
+  }
+  .approve {
+    &__container {
+      width: 100%;
+      min-height: 450px;
+    }
+    &__button {
+      display: none;
+    }
+  }
+  .team {
+    &__wrapper {
+      grid-template-columns: 100%;
+    }
+    &__name {
+      font-size: 20px;
+    }
+    &__prof {
+      font-size: 16px;
+    }
+  }
+  .try-app {
+    &__item {
+      padding: 0;
+      max-width: 175px;
+      background: none;
+    }
+    &__google-play {
+      content: url("../../img/icons/google-play.png");
+    }
+    &__app-store {
+      content: url("../../img/icons/app-store.png");
+    }
+    &__store {
+      display: none;
     }
     .try-app {
-        &__item {
-            padding: 0;
-            max-width: 175px;
-            background: none;
+      &-elements {
+        &__whale {
+          display: none;
         }
-        &__google-play {
-            content: url('../../img/icons/google-play.png');
-        }
-        &__app-store {
-            content: url('../../img/icons/app-store.png');
-        }
-        &__store {
-            display: none;
-        }
-        .try-app {
-            &-elements {
-                &__whale {
-                    display: none;
-                }
-                &__fish {
-                    &_red {
-                        &:nth-child(1) {
-                            top: 80px;
-                            width: 45px;
-                            right: 189px;
-                        }
-                        &:nth-child(2) {
-                            top: 110px;
-                            right: 142px;
-                        }
-                    }
-                    &_yellow {
-                        top: 130px;
-                        right: 76px;
-                    }
-                }
+        &__fish {
+          &_red {
+            &:nth-child(1) {
+              top: 80px;
+              width: 45px;
+              right: 189px;
             }
-        }
-    }
-    .footer {
-        &__wrapper {
-            flex-direction: column;
-            row-gap: 25px;
-        }
-        &__logo {
-            text-align: center;
-            &::after {
-                left: 50%;
-                transform: translateX(-50%);
-                bottom: -5px;
+            &:nth-child(2) {
+              top: 110px;
+              right: 142px;
             }
+          }
+          &_yellow {
+            top: 130px;
+            right: 76px;
+          }
         }
-        &__socials {
-            justify-content: center;
-        }
-        &__info {
-            text-align: center;
-        }
-        &__stores {
-            justify-content: center;
-        }
+      }
     }
-    .title {
-        font-size: 50px;
+  }
+  .footer {
+    &__wrapper {
+      flex-direction: column;
+      row-gap: 25px;
     }
+    &__logo {
+      text-align: center;
+      &::after {
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -5px;
+      }
+    }
+    &__socials {
+      justify-content: center;
+    }
+    &__info {
+      text-align: center;
+    }
+    &__stores {
+      justify-content: center;
+    }
+  }
+  .title {
+    font-size: 50px;
+  }
 }
 @media (max-width: 576px) {
-    .container {
-        padding: 0 15px;
+  .container {
+    padding: 0 15px;
+  }
+  .header {
+    &__list {
+      row-gap: 30px;
     }
-    .header {
-        &__list {
-            row-gap: 30px;
-        }
-        &__link {
-            font-size: 25px;
-        }
+    &__link {
+      font-size: 25px;
     }
-    .promo {
-        &__wrapper {
-            padding-top: 210px;
-            margin: 0 auto;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-        }
-        &__title {
-            font-size: 60px;
-        }
-        &__subtitle {
-            padding: 0;
-            font-size: 18px;
-        }
-        &__description {
-            padding: 0;
-            font-size: 15px;
-        }
-        &__stores {
-            position: absolute;
-            bottom: 145px;
-            flex-direction: row;
-            column-gap: 10px;
-        }
-        &__item {
-            row-gap: 5px;
-        }
-        &__store {
-            font-size: 20px;
-            text-align: center;
-        }
-        &__button {
-            max-width: 140px;
-        }
-        &__socials {
-            left: 25px;
-            bottom: 25px;
-            justify-content: start;
-        }
-        &__social {
-            width: 25px;
-            height: 25px;
-        }
-        &-elements {
-            &__whale {
-                top: 393px;
-                width: 290px;
-                left: 0;
-                transform: translateX(-50%);
-                margin: 0 auto;
-            }
-            &__square {
-                width: 220px;
-                height: 220px;
-                top: 408px;
-                left: 50%;
-                &:nth-child(1) {
-                    transform: translateX(-50%) rotate(51.74deg);
-                }
-                &:nth-child(2) {
-                    transform: translateX(-50%) rotate(41.74deg);
-                }
-                &:nth-child(3) {
-                    transform: translateX(-50%) rotate(31.74deg);
-                }
-            }
-            &__fish {
-                &_blue {
-                    width: 45px;
-                    top: 148px;
-                    right: 84px;
-                }
-                &_red {
-                    &:nth-child(1) {
-                        width: 55px;
-                        top: 90px;
-                        right: 128px;
-                    }
-                    &:nth-child(2) {
-                        width: 52px;
-                        top: 819px;
-                        right: 22px;
-                    }
-                }
-                &_yellow {
-                    width: 50px;
-                    top: 146px;
-                    right: 22px;
-                }
-                &_white {
-                    width: 70px;
-                    top: 762px;
-                    right: 76px;
-                }
-            }
-        }
+  }
+  .promo {
+    &__wrapper {
+      padding-top: 210px;
+      margin: 0 auto;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
     }
-    .about {
-        &__subtitle {
-            margin-top: 10px;
-            line-height: normal;
-        }
-        &__wrapper {
-            row-gap: 15px;
-        }
-        &-item {
-            &__title {
-                font-size: 17px;
-                line-height: normal;
-            }
-            &__description {
-                font-size: 15px;
-                line-height: normal;
-            }
-        }
+    &__title {
+      font-size: 60px;
     }
-    .stories {
-        min-height: auto;
-        &__slider {
-            margin: 0 auto;
-            max-width: 270px;
-            &_front {
-                display: none;
-            }
+    &__subtitle {
+      padding: 0;
+      font-size: 18px;
+    }
+    &__description {
+      padding: 0;
+      font-size: 15px;
+    }
+    &__stores {
+      position: absolute;
+      bottom: 145px;
+      flex-direction: row;
+      column-gap: 10px;
+    }
+    &__item {
+      row-gap: 5px;
+    }
+    &__store {
+      font-size: 20px;
+      text-align: center;
+    }
+    &__button {
+      max-width: 140px;
+    }
+    &__socials {
+      left: 25px;
+      bottom: 25px;
+      justify-content: start;
+    }
+    &__social {
+      width: 25px;
+      height: 25px;
+    }
+    &-elements {
+      &__whale {
+        top: 393px;
+        width: 290px;
+        left: 0;
+        transform: translateX(-50%);
+        margin: 0 auto;
+      }
+      &__square {
+        width: 220px;
+        height: 220px;
+        top: 408px;
+        left: 50%;
+        &:nth-child(1) {
+          transform: translateX(-50%) rotate(51.74deg);
         }
-        &-item {
-            &__tablet {
-                width: 100%;
-            }
-            &__picture {
-                min-width: 255px;
-            }
+        &:nth-child(2) {
+          transform: translateX(-50%) rotate(41.74deg);
         }
-        &-elements {
-            display: none;
-            /* &__fish {
+        &:nth-child(3) {
+          transform: translateX(-50%) rotate(31.74deg);
+        }
+      }
+      &__fish {
+        &_blue {
+          width: 45px;
+          top: 148px;
+          right: 84px;
+        }
+        &_red {
+          &:nth-child(1) {
+            width: 55px;
+            top: 90px;
+            right: 128px;
+          }
+          &:nth-child(2) {
+            width: 52px;
+            top: 819px;
+            right: 22px;
+          }
+        }
+        &_yellow {
+          width: 50px;
+          top: 146px;
+          right: 22px;
+        }
+        &_white {
+          width: 70px;
+          top: 762px;
+          right: 76px;
+        }
+      }
+    }
+  }
+  .about {
+    &__subtitle {
+      margin-top: 10px;
+      line-height: normal;
+    }
+    &__wrapper {
+      row-gap: 15px;
+    }
+    &-item {
+      &__title {
+        font-size: 17px;
+        line-height: normal;
+      }
+      &__description {
+        font-size: 15px;
+        line-height: normal;
+      }
+    }
+  }
+  .stories {
+    min-height: auto;
+    &__slider {
+      margin: 0 auto;
+      max-width: 270px;
+      &_front {
+        display: none;
+      }
+    }
+    &-item {
+      &__tablet {
+        width: 100%;
+      }
+      &__picture {
+        min-width: 255px;
+      }
+    }
+    &-elements {
+      display: none;
+      /* &__fish {
                 &_red {
                     &:nth-child(1) {
                         width: 27px;
@@ -662,106 +662,106 @@
                     width: 40px;
                 }
             } */
-        }
     }
-    .approve {
-        &__container {
-            min-height: 580px;
-        }
-        &__link {
-            font-size: 15px;
-        }
-        &__icon {
-            width: 15px;
-        }
-        &__name {
-            font-size: 17px;
-        }
-        &__prof {
-            font-size: 17px;
-        }
-        &__text {
-            font-size: 15px;
-        }
+  }
+  .approve {
+    &__container {
+      min-height: 580px;
     }
-    .playtest {
-        &-video {
-            padding: 25px 10px;
-            &__item {
-                box-shadow: 0px 0px 7px 5px rgba(0, 0, 0, 0.25);
-            }
-        }
+    &__link {
+      font-size: 15px;
     }
-    .team {
-        &__wrapper {
-            gap: 15px;
-        }
-        &__name {
-            font-size: 17px;
-        }
-        &__prof {
-            font-size: 15px;
-        }
+    &__icon {
+      width: 15px;
+    }
+    &__name {
+      font-size: 17px;
+    }
+    &__prof {
+      font-size: 17px;
+    }
+    &__text {
+      font-size: 15px;
+    }
+  }
+  .playtest {
+    &-video {
+      padding: 25px 10px;
+      &__item {
+        box-shadow: 0px 0px 7px 5px rgba(0, 0, 0, 0.25);
+      }
+    }
+  }
+  .team {
+    &__wrapper {
+      gap: 15px;
+    }
+    &__name {
+      font-size: 17px;
+    }
+    &__prof {
+      font-size: 15px;
+    }
+  }
+  .try-app {
+    &__wrapper {
+      padding: 25px;
+    }
+    &__stores {
+      column-gap: 15px;
+    }
+    &__item {
+      max-width: 140px;
     }
     .try-app {
-        &__wrapper {
-            padding: 25px;
+      &-elements {
+        &__whale {
+          display: none;
         }
-        &__stores {
-            column-gap: 15px;
-        }
-        &__item {
-            max-width: 140px;
-        }
-        .try-app {
-            &-elements {
-                &__whale {
-                    display: none;
-                }
-                &__fish {
-                    &_red {
-                        &:nth-child(1) {
-                            top: 35px;
-                            width: 35px;
-                            right: 32px;
-                        }
-                        &:nth-child(2) {
-                            top: 73px;
-                            width: 25px;
-                            right: 70px;
-                        }
-                    }
-                    &_yellow {
-                        top: 88px;
-                        width: 35px;
-                        right: 26px;
-                    }
-                }
+        &__fish {
+          &_red {
+            &:nth-child(1) {
+              top: 35px;
+              width: 35px;
+              right: 32px;
             }
+            &:nth-child(2) {
+              top: 73px;
+              width: 25px;
+              right: 70px;
+            }
+          }
+          &_yellow {
+            top: 88px;
+            width: 35px;
+            right: 26px;
+          }
         }
+      }
     }
-    .footer {
-        &__wrapper {
-            row-gap: 15px;
-        }
-        &__link {
-            font-size: 15px;
-        }
-        &__social {
-            width: 25px;
-            height: 25px;
-        }
+  }
+  .footer {
+    &__wrapper {
+      row-gap: 15px;
     }
-    .policy {
-        &__text {
-            font-size: 17px;
-        }
+    &__link {
+      font-size: 15px;
     }
-    .title {
-        font-size: 30px;
-        line-height: normal;
+    &__social {
+      width: 25px;
+      height: 25px;
     }
-    .subtitle {
-        font-size: 17px;
+  }
+  .policy {
+    &__text {
+      font-size: 17px;
     }
+  }
+  .title {
+    font-size: 30px;
+    line-height: normal;
+  }
+  .subtitle {
+    font-size: 17px;
+  }
 }
