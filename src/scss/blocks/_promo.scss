@@ -27,7 +27,7 @@
   }
   &__wrapper {
     padding-top: 260px;
-    max-width: 432px;
+    max-width: 445px;
     display: flex;
     flex-direction: column;
     z-index: -2;
@@ -45,6 +45,9 @@
     font-size: 25px;
     line-height: normal;
     color: var(--dark-text-color);
+    span {
+      color: var(--dark-blue-color);
+    }
   }
   &__description {
     padding-left: 5px;
