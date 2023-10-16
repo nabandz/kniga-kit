@@ -1,0 +1,9 @@
+.title {
+  margin: 0;
+  font-size: 48px;
+  font-weight: 800;
+  color: var(--light-color);
+  &_blue {
+    color: var(--blue-color);
+  }
+}

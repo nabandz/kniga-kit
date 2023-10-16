@@ -1,11 +1,9 @@
 import dartSass from "sass";
 import gulpSass from "gulp-sass";
 import rename from "gulp-rename";
-
-import cleanCss from "gulp-clean-css"; //Сжатие CSS файлов
-import webpcss from "gulp-webpcss"; //Вывод WEBP изображений
-import autoprefixer from "gulp-autoprefixer"; //Добавление вендерных префиксов
-import groupCssMediaQueries from "gulp-group-css-media-queries"; //Группировка медиа запросов
+import cleanCss from "gulp-clean-css";
+import autoprefixer from "gulp-autoprefixer";
+import groupCssMediaQueries from "gulp-group-css-media-queries";
 
 const sass = gulpSass(dartSass);
 
@@ -28,12 +26,6 @@ export const scss = () => {
       )
       .pipe(app.plugins.replace(/@img\//g, "../img/"))
       .pipe(app.plugins.if(app.isBuild, groupCssMediaQueries()))
-      /* .pipe(app.plugins.if(app.isBuild, webpcss(
-        {
-            webpClass: '.webp',
-            noWebpClass: '.no-webp'
-        }
-    ))) */
       .pipe(
         app.plugins.if(
           app.isBuild,

@@ -2,58 +2,18 @@
 @import "mixins";
 @import "vendor";
 @import "fonts";
+@import "settings";
 
-* {
-  font-family: "Raleway", sans-serif;
-  box-sizing: border-box;
-  font-variant-numeric: lining-nums;
-
-  ::-webkit-scrollbar {
-    width: 10px;
-  }
-
-  ::-webkit-scrollbar-track {
-    background-color: #f9f9fd;
-    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
-  }
-
-  ::-webkit-scrollbar-thumb {
-    background-color: var(--dark-blue-color);
-  }
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-.container {
-  position: relative;
-  max-width: 1200px;
-  height: 100%;
-  margin: 0 auto;
-  padding: 0 50px;
-  z-index: 1;
-}
-
-.hidden {
-  visibility: hidden;
-}
-
-.none {
-  display: none;
-}
-
-@import "blocks/title";
-@import "blocks/subtitle";
-@import "blocks/animation";
-@import "blocks/promo";
-@import "blocks/header";
-@import "blocks/about";
-@import "blocks/stories";
-@import "blocks/approve";
-@import "blocks/playtest";
-@import "blocks/team";
-@import "blocks/try-app";
-@import "blocks/footer";
-@import "blocks/policy";
-@import "blocks/media";
+@import "components/title";
+@import "components/subtitle";
+@import "components/animation";
+@import "components/promo";
+@import "components/header";
+@import "components/about";
+@import "components/stories";
+@import "components/approve";
+@import "components/playtest";
+@import "components/team";
+@import "components/try-app";
+@import "components/footer";
+@import "components/policy";
