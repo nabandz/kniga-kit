@@ -1,7 +1,8 @@
 :root {
   --font-family: "Raleway", sans-serif;
-  --container-width: 1160px;
+  --content-width: 1160px;
   --container-offset: 20px;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
 
   --light-blue-color: #dfeafc;
   --soft-blue-color: #79a3f7;
@@ -17,6 +18,7 @@
   --orange-color: #ffa05c;
 
   --text-base: 18px;
+  --text-xl: 20px;
   --text-2xl: 24px;
   --text-5xl: 48px;
 }
