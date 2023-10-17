@@ -4,7 +4,7 @@ import Swiper from "swiper/bundle";
 const swiperStories = new Swiper(".stories__slider", {
   loop: true,
   effect: "fade",
-  speed: 2500,
+  speed: 1700,
   allowTouchMove: false,
   autoplay: {
     delay: 3000,
@@ -15,10 +15,10 @@ const swiperStories = new Swiper(".stories__slider", {
 const swiperApprove = new Swiper(".approve__slider", {
   loop: true,
   mousewheel: true,
-  speed: 2500,
+  speed: 1700,
   spaceBetween: 50,
   autoplay: {
-    delay: 5000,
+    delay: 7000,
     disableOnInteraction: false,
     pauseOnMouseEnter: true,
   },
