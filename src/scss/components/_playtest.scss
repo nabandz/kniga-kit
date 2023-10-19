@@ -1,42 +1,69 @@
 .playtest {
-  padding: 50px 0 75px 0;
+  padding: 64px 0;
   position: relative;
-  &::before {
-    content: "";
-    position: absolute;
-    background: url("../img/bg-elements/dark-blue-layer-3.svg") top/contain
-      no-repeat;
-    left: 0;
-    top: -1px;
-    width: 100%;
-    height: 100%;
-    background-size: 100%;
+  &__title {
+    text-align: end;
   }
-  &::after {
-    content: "";
+  &__subtitle {
+    margin-top: 16px;
+    text-align: end;
+  }
+  &__background {
     position: absolute;
-    background: url("../img/bg-elements/blue-layer-3.svg") bottom/contain
-      no-repeat;
+    top: 0;
     left: 0;
-    bottom: -1px;
     width: 100%;
     height: 100%;
-    background-size: 100%;
+    z-index: -1;
+    video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(10, 10, 10, 0.7);
+    }
   }
   &__wrapper {
-    vertical-align: top;
-    overflow: hidden;
+    margin-top: 32px;
   }
-  &-video {
-    padding: 25px;
-    position: relative;
-    max-width: 890px;
-    margin: 0 auto;
-    &__item {
+}
+.video {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  &__button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    padding: 50px;
+    padding-left: 65px;
+    background-color: var(--light-color);
+    transition: 0.4s;
+    border: none;
+    cursor: pointer;
+    img {
       width: 100%;
-      border-radius: 25px;
-      vertical-align: top;
-      box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.25);
     }
+    &:hover {
+      background-color: var(--light-blue-color);
+      outline: 4px solid var(--blue-color);
+    }
+  }
+  &__item {
+    width: 100%;
+    height: 653px;
+    border: none;
   }
 }

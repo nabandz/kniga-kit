@@ -1,11 +1,23 @@
 <section class="playtest">
-  <div class="container">
+  <div class="container playtest__container">
     <h2 class="title playtest__title">Дети играют</h2>
+    <div class="subtitle playtest__subtitle">
+      Все сюжеты и задания тщательно протестированы и подобраны по возрасту.
+      Ваш ребёнок точно справится самостоятельно, а вы сможете выпить свой чай горячим.
+    </div>
+    <div class="playtest__background">
+      <video autoplay muted loop>
+        <source src="../video/playtest.mp4" type="video/mp4">
+      </video>
+    </div>
     <div class="playtest__wrapper">
-      <div class="playtest-video">
-        <video class="playtest-video__item" id="video-item" controls loop>
-          <source src="video/playtest.mp4" type="video/mp4">
-        </video>
+      <div class="video">
+        <button class="video__button" id="video-button">
+          <img src="@img/icons/play.svg" alt="play">
+        </button>
+        <iframe class="video__item hidden"
+          src="https://drive.google.com/file/d/1Ms9sQTjvxc7FCzHOyKdLZYD_I4OSNshH/preview" id="video-item"
+          allow="autoplay"></iframe>
       </div>
     </div>
   </div>
