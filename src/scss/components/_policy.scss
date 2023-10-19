@@ -1,27 +1,24 @@
 .policy {
-  padding: 50px 0;
-  background: #371ed3;
+  padding: 114px 0 64px 0;
+  background-color: var(--dark-blue-color);
   &__wrapper {
-    max-width: 100%;
-    background: #ffffff;
-    padding: 25px;
-    border-radius: 25px;
-  }
-  &__subtitle {
-    margin: 15px 0;
-  }
-  &__info {
-    margin-top: 50px;
     display: flex;
     flex-direction: column;
-    row-gap: 25px;
+    row-gap: 32px;
+  }
+  &__subtitle {
+    margin-top: 16px;
+  }
+  &__info {
+    display: flex;
+    flex-direction: column;
+    row-gap: 32px;
   }
   &__text {
-    margin-top: 10px;
-    font-weight: 300;
-    font-size: 24px;
-    line-height: 28px;
-    font-feature-settings: "pnum" on, "lnum" on;
-    color: #000000;
+    margin: 0;
+    margin-top: 16px;
+    color: var(--light-color);
+    font-size: var(--text-base);
+    font-weight: 400;
   }
 }
