@@ -2,17 +2,13 @@
   padding: 64px 0;
   background-color: var(--blue-color);
   position: relative;
-  &__title {
-    text-align: start;
-  }
   &__subtitle {
     margin-top: 16px;
-    text-align: start;
   }
   &__wrapper {
     margin-top: 32px;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(354px, auto));
+    grid-template-columns: repeat(auto-fill, minmax(365px, auto));
     justify-content: center;
     align-items: start;
     gap: 28px;
