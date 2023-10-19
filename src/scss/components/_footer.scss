@@ -1,43 +1,20 @@
 .footer {
-  padding: 50px 0 25px;
+  padding: 24px 0;
   background: var(--dark-blue-color);
-  position: relative;
-  &::before {
-    content: "";
-    position: absolute;
-    background: url("../img/bg-elements/white-layer-2.svg") top/contain
-      no-repeat;
-    left: 0;
-    top: -1px;
-    width: 100%;
-    height: 100%;
-    background-size: 100%;
+  &__container {
+    position: relative;
   }
   &__wrapper {
-    margin-top: 20px;
+    margin-top: 28px;
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
   &__logo {
-    position: relative;
-    font-weight: 800;
-    font-size: 30px;
-    line-height: 35px;
-    color: var(--light-color);
-    &::after {
-      content: "";
-      position: absolute;
-      background-color: var(--light-color);
-      width: 150px;
-      height: 3px;
-      left: 0;
-      bottom: -5px;
-    }
+    display: block;
+    width: 145px;
   }
   &__info {
-    margin: 0;
-    padding: 0;
     display: flex;
     flex-direction: column;
     row-gap: 15px;
@@ -45,9 +22,9 @@
   }
   &__link {
     position: relative;
-    font-weight: 800;
-    font-size: 20px;
-    line-height: 23px;
+    font-weight: 400;
+    font-size: var(--text-base);
+    line-height: normal;
     color: var(--light-color);
     text-decoration: none;
     &::before {
@@ -56,7 +33,7 @@
       left: 0;
       position: absolute;
       width: 0%;
-      height: 2px;
+      height: 1px;
       background-color: var(--light-color);
       transition: 0.4s;
     }
@@ -66,32 +43,40 @@
   }
   &__socials {
     display: flex;
-    column-gap: 15px;
+    column-gap: 16px;
     justify-content: end;
   }
   &__social {
-    width: 35px;
-    height: 35px;
+    width: 32px;
+    height: 32px;
     transition: 0.4s;
     img {
       width: 100%;
     }
     &:hover {
-      transform: translateY(-5px);
+      transform: translateY(-3px);
     }
   }
   &__stores {
     display: flex;
-    justify-content: end;
-    align-items: center;
-    column-gap: 10px;
+    position: relative;
+    column-gap: 8px;
   }
-  &__button {
-    width: 134px;
-    background: rgba(0, 0, 0, 0);
-    cursor: pointer;
-    img {
-      width: 100%;
+  &__store {
+    z-index: 2;
+    width: 147px;
+    transition: 0.4s;
+    &:hover {
+      transform: translateY(-3px);
+    }
+  }
+  &-elements {
+    &__whale {
+      width: 209px;
+      position: absolute;
+      bottom: -24px;
+      right: 63px;
+      object-fit: contain;
     }
   }
 }
