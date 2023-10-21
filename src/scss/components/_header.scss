@@ -9,6 +9,9 @@
   border-bottom: 2px;
   border-color: var(--light-color);
   transition: 0.4s;
+  @include lg {
+    padding: 16px 0;
+  }
   &__wrapper {
     display: flex;
     justify-content: space-between;
@@ -16,16 +19,29 @@
   }
   &__logo {
     width: 145px;
+    @include lg {
+      width: 110px;
+    }
+    @include sm {
+      width: 95px;
+    }
   }
   &__stores {
     display: flex;
     column-gap: 8px;
   }
   &__store {
+    display: flex;
     width: 147px;
     transition: 0.4s;
     &:hover {
       transform: translateY(-3px);
+    }
+    @include lg {
+      width: 120px;
+    }
+    @include sm {
+      width: 90px;
     }
   }
   &_active {

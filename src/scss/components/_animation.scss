@@ -15,20 +15,31 @@
     transform: translateY(0) rotate(-2deg);
   }
 }
-@keyframes swim-horizontal {
+@keyframes drawing {
   0% {
-    transform: translateY(0) rotate(-2deg) scaleX(-1);
+    transform: translateX(0%) rotate(10deg);
   }
-  25% {
-    transform: translateY(-10px) rotate(2deg) scaleX(-1);
+  20% {
+    transform: translateX(5%) rotateZ(5deg);
   }
-  50% {
-    transform: translateY(0) rotate(-2deg) scaleX(-1);
+  40% {
+    transform: translateX(10%) rotateZ(10deg);
   }
-  75% {
-    transform: translateY(-10px) rotate(2deg) scaleX(-1);
+  80% {
+    transform: translateX(15%) rotateZ(5deg);
   }
   100% {
-    transform: translateY(0) rotate(-2deg) scaleX(-1);
+    transform: translateX(20%);
+  }
+}
+@keyframes ship {
+  0% {
+    transform: translateY(0) rotate(-1deg);
+  }
+  50% {
+    transform: translateY(-5px) rotate(1deg);
+  }
+  100% {
+    transform: translateY(0) rotate(-1deg);
   }
 }

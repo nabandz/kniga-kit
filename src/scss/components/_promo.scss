@@ -3,8 +3,14 @@
   z-index: 5;
   position: relative;
   height: 100vh;
-  min-height: 800px;
+  min-height: 900px;
   background-color: var(--dark-blue-color);
+  @include lg {
+    height: 900px;
+  }
+  @include sm {
+    padding: 64px 0 32px 0;
+  }
   &__container {
     height: 100%;
     position: relative;
@@ -14,6 +20,11 @@
     display: flex;
     max-width: 460px;
     flex-direction: column;
+    @include lg {
+      margin: 0 auto;
+      padding-top: 64px;
+      max-width: 482px;
+    }
   }
   &__title {
     margin: 0;
@@ -33,6 +44,24 @@
       background-image: url("@img/bg-elements/pencil.png");
       background-size: contain;
       background-repeat: no-repeat;
+      @include md {
+        bottom: 76px;
+        right: -17px;
+        width: 71px;
+        height: 74px;
+      }
+      @include sm {
+        bottom: 49px;
+        right: 17px;
+        width: 38px;
+        height: 52px;
+      }
+    }
+    @include lg {
+      text-align: center;
+    }
+    @include sm {
+      font-size: 60px;
     }
   }
   &__subtitle {
@@ -42,17 +71,41 @@
     span {
       color: var(--green-color);
     }
+    @include lg {
+      br {
+        display: none;
+      }
+      text-align: center;
+    }
+    @include sm {
+      font-size: var(--text-base);
+    }
   }
   &__description {
     margin-top: 16px;
     color: var(--light-color);
     font-size: var(--text-base);
     font-weight: 400;
+    @include lg {
+      text-align: center;
+    }
+    @include sm {
+      font-size: var(--text-sm);
+    }
   }
   &__stores {
     margin-top: 32px;
     display: flex;
     column-gap: 32px;
+    justify-content: center;
+    align-items: center;
+    @include lg {
+      position: absolute;
+      bottom: 64px;
+      column-gap: 16px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
   }
   &__item {
     display: flex;
@@ -64,6 +117,9 @@
     color: var(--light-color);
     font-size: var(--text-2xl);
     font-weight: 600;
+    @include lg {
+      display: none;
+    }
   }
   &__button {
     max-width: 220px;
@@ -81,15 +137,38 @@
       transform: translateY(-3px);
       box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.35);
     }
+    @include lg {
+      width: 147px;
+      background: rgba(0, 0, 0, 0);
+      padding: 0;
+    }
+    @include sm {
+      width: 130px;
+    }
+  }
+  &__google-play {
+    @include lg {
+      content: url("@img/icons/google-play.png");
+    }
+  }
+  &__app-store {
+    @include lg {
+      content: url("@img/icons/app-store.png");
+    }
   }
   &__socials {
     position: absolute;
     bottom: 0px;
-    right: 0px;
+    right: 20px;
     display: flex;
     column-gap: 16px;
     align-items: center;
     justify-content: end;
+    @include lg {
+      left: 50%;
+      transform: translateX(-50%);
+      justify-content: center;
+    }
   }
   &__social {
     width: 32px;
@@ -111,11 +190,21 @@
   left: 0;
   &__whale-bg {
     position: absolute;
+    width: 544px;
     top: 129px;
     right: 32px;
     z-index: -5;
+    @include xl {
+      width: 468px;
+      top: 171px;
+    }
+    @include lg {
+      width: 323px;
+      top: 291px;
+      right: 50%;
+      transform: translateX(50%);
+    }
   }
-
   &__whale {
     position: absolute;
     top: 183px;
@@ -125,6 +214,23 @@
     z-index: -4;
     img {
       width: 100%;
+    }
+    @include xl {
+      top: 200px;
+      width: 511px;
+    }
+    @include lg {
+      top: 281px;
+      right: 159px;
+      width: 399px;
+    }
+    @include md {
+      right: 73px;
+    }
+    @include sm {
+      top: 330px;
+      right: 22px;
+      width: 284px;
     }
   }
   &__fishs {
@@ -144,6 +250,18 @@
         top: 210px;
         right: 214px;
         animation-duration: 8s;
+        @include lg {
+          top: 290px;
+        }
+        @include md {
+          top: 318px;
+          width: 52px;
+          right: 119px;
+        }
+        @include sm {
+          top: 278px;
+          right: 119px;
+        }
       }
       &:nth-child(2) {
         position: absolute;
@@ -151,6 +269,9 @@
         top: 599px;
         right: 115px;
         animation-duration: 6s;
+        @include lg {
+          display: none;
+        }
       }
     }
     &_blue {
@@ -160,6 +281,18 @@
       rotate: 334deg;
       width: 50px;
       animation-duration: 7s;
+      @include lg {
+        top: 350px;
+      }
+      @include md {
+        top: 370px;
+        width: 42px;
+        right: 148px;
+      }
+      @include sm {
+        top: 320px;
+        right: 68px;
+      }
     }
     &_yellow {
       position: absolute;
@@ -167,6 +300,20 @@
       right: 73px;
       width: 53px;
       animation-duration: 8s;
+      @include lg {
+        right: 100px;
+        top: 287px;
+      }
+      @include md {
+        right: 67px;
+        top: 379px;
+        width: 47px;
+      }
+      @include sm {
+        right: 58px;
+        top: 269px;
+        width: 41px;
+      }
     }
     &_white {
       position: absolute;
@@ -175,24 +322,9 @@
       width: 74px;
       rotate: -10deg;
       animation-duration: 5s;
+      @include lg {
+        display: none;
+      }
     }
-  }
-}
-
-@keyframes drawing {
-  0% {
-    transform: translateX(0%) rotate(10deg);
-  }
-  20% {
-    transform: translateX(5%) rotateZ(5deg);
-  }
-  40% {
-    transform: translateX(10%) rotateZ(10deg);
-  }
-  80% {
-    transform: translateX(15%) rotateZ(5deg);
-  }
-  100% {
-    transform: translateX(20%);
   }
 }

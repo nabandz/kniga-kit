@@ -9,4 +9,7 @@
   &_mini {
     font-size: var(--text-2xl);
   }
+  @include md {
+    font-size: var(--text-4xl);
+  }
 }

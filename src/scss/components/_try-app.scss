@@ -1,8 +1,11 @@
 .try-app {
   padding: 64px 0;
-  background: url("../../img/sea-bg.jpg") center (top/cover) no-repeat;
+  background: url("@img/sea-bg.jpg") center (top/cover) no-repeat;
   background-attachment: fixed;
   overflow-y: hidden;
+  @include sm {
+    padding: 32px 0;
+  }
   &__container {
     position: relative;
   }
@@ -14,6 +17,9 @@
     display: flex;
     justify-content: center;
     column-gap: 32px;
+    @include lg {
+      column-gap: 16px;
+    }
   }
   &__item {
     display: flex;
@@ -25,6 +31,9 @@
     color: var(--light-color);
     font-size: var(--text-2xl);
     font-weight: 600;
+    @include lg {
+      display: none;
+    }
   }
   &__button {
     z-index: 5;
@@ -43,6 +52,21 @@
       transform: translateY(-3px);
       box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.35);
     }
+    @include lg {
+      width: 147px;
+      background: rgba(0, 0, 0, 0);
+      padding: 0;
+    }
+  }
+  &__google-play {
+    @include lg {
+      content: url("@img/icons/google-play.png");
+    }
+  }
+  &__app-store {
+    @include lg {
+      content: url("@img/icons/app-store.png");
+    }
   }
   &-elements {
     position: absolute;
@@ -50,11 +74,29 @@
     top: 0;
     left: 0;
     &__whale {
-      animation: swim-horizontal 12s infinite alternate ease-in-out;
+      animation: swim 12s infinite alternate ease-in-out;
       position: absolute;
       top: 137px;
       left: 36px;
       width: 306px;
+      @include xl {
+        top: 158px;
+        left: 4px;
+        width: 253px;
+      }
+      @include lg {
+        top: 104px;
+        left: 37px;
+        width: 168px;
+      }
+      @include md {
+        top: 96px;
+        left: 2px;
+        width: 122px;
+      }
+      @include sm {
+        display: none;
+      }
     }
     &__ship {
       animation: ship 4s infinite alternate ease-in-out;
@@ -63,18 +105,24 @@
       right: 36px;
       width: 277px;
       rotate: -5deg;
+      @include xl {
+        top: 180px;
+        right: 25px;
+        width: 216px;
+      }
+      @include lg {
+        top: 101px;
+        right: 85px;
+        width: 108px;
+      }
+      @include md {
+        top: 95px;
+        right: 22px;
+        width: 94px;
+      }
+      @include sm {
+        display: none;
+      }
     }
-  }
-}
-
-@keyframes ship {
-  0% {
-    transform: translateY(0) rotate(-1deg);
-  }
-  50% {
-    transform: translateY(-5px) rotate(1deg);
-  }
-  100% {
-    transform: translateY(0) rotate(-1deg);
   }
 }

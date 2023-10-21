@@ -3,6 +3,6 @@ const videoButton = document.querySelector("#video-button"),
   video = document.querySelector("#video-item");
 
 videoButton.addEventListener("click", function () {
-  videoButton.classList.add("none");
+  videoButton.classList.add("hide");
   video.classList.remove("hidden");
 });

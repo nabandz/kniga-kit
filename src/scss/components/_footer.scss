@@ -9,10 +9,23 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @include lg {
+      margin-top: 16px;
+    }
+    @include md {
+      flex-direction: column;
+      gap: 28px;
+    }
   }
   &__logo {
     display: block;
     width: 145px;
+    @include lg {
+      width: 110px;
+    }
+    @include md {
+      margin: 0 auto;
+    }
   }
   &__info {
     display: flex;
@@ -63,11 +76,18 @@
     column-gap: 8px;
   }
   &__store {
+    display: flex;
     z-index: 2;
     width: 147px;
     transition: 0.4s;
     &:hover {
       transform: translateY(-3px);
+    }
+    @include lg {
+      width: 120px;
+    }
+    @include sm {
+      width: 95px;
     }
   }
   &-elements {
@@ -77,6 +97,13 @@
       bottom: -24px;
       right: 63px;
       object-fit: contain;
+      @include lg {
+        width: 169px;
+      }
+      @include md {
+        width: 136px;
+        right: 12px;
+      }
     }
   }
 }

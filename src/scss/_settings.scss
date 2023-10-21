@@ -58,6 +58,19 @@ a {
   margin: 0 auto;
   padding: 0 var(--container-offset);
   max-width: var(--container-width);
+  @include xl {
+    max-width: 992px;
+  }
+  @include lg {
+    max-width: 768px;
+  }
+  @include md {
+    max-width: 576px;
+  }
+  @include sm {
+    max-width: 360px;
+    padding: 0 10px;
+  }
 }
 
 .hidden {
