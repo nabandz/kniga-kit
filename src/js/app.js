@@ -1,6 +1,11 @@
-import "./modules/header.js";
-import "./modules/tabcontent.js";
-import "./modules/tab-scroll.js";
-import "./modules/video.js";
-import "./modules/slider.js";
-/* import "./modules/menu.js"; */
+import activateHeaderShadow from "./modules/header.js";
+import activateTabContent from "./modules/tabcontent.js";
+import activateTabShadow from "./modules/tab-scroll.js";
+import activateVideo from "./modules/video.js";
+import slider from "./modules/slider.js";
+
+activateHeaderShadow();
+activateTabContent();
+activateTabShadow();
+activateVideo();
+slider();
