@@ -25,6 +25,7 @@ export const scss = () => {
         })
       )
       .pipe(app.plugins.replace(/@img\//g, "../img/"))
+      .pipe(app.plugins.replace(/@video\//g, "../video/"))
       .pipe(app.plugins.if(app.isBuild, groupCssMediaQueries()))
       .pipe(
         app.plugins.if(
