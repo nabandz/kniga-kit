@@ -72,12 +72,12 @@
   }
   &__google-play {
     @include lg {
-      content: url("@img/icons/google-play.png");
+      content: url("@img/icons/stores/google-play.png");
     }
   }
   &__app-store {
     @include lg {
-      content: url("@img/icons/app-store.png");
+      content: url("@img/icons/stores/app-store.png");
     }
   }
   &-elements {

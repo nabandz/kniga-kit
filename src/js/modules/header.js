@@ -1,11 +1,11 @@
 function activateHeaderShadow() {
-  const header = document.querySelector(".header");
+  const header = document.querySelector(".header__wrapper");
 
   window.addEventListener("scroll", function () {
     if (window.scrollY > 0) {
-      header.classList.add("header_active");
+      header.classList.add("header__wrapper_active");
     } else {
-      header.classList.remove("header_active");
+      header.classList.remove("header__wrapper_active");
     }
   });
 }

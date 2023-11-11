@@ -5,46 +5,70 @@
   top: 0;
   left: 0;
   width: 100%;
-  background-color: var(--dark-blue-color);
-  border-bottom: 2px;
-  border-color: var(--light-color);
-  transition: 0.4s;
   @include lg {
     padding: 16px 0;
   }
   &__wrapper {
+    padding: 16px 28px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-radius: 24px;
+    background: var(--light-blue-color);
+    &_active {
+      box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.35);
+    }
+    @include lg {
+      padding: 8px 16px;
+    }
   }
   &__logo {
-    width: 145px;
+    width: 98px;
     @include lg {
-      width: 110px;
+      width: 80px;
     }
     @include sm {
-      width: 95px;
+      width: 70px;
     }
   }
   &__stores {
     display: flex;
-    column-gap: 8px;
+    column-gap: 16px;
+    @include sm {
+      column-gap: 8px;
+    }
   }
   &__store {
     display: flex;
-    width: 147px;
+    width: 40px;
     transition: 0.4s;
     &:hover {
       transform: translateY(-3px);
     }
-    @include lg {
-      width: 120px;
-    }
     @include sm {
-      width: 90px;
+      width: 30px;
     }
   }
-  &_active {
-    box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.35);
+}
+.nav {
+  @include lg {
+    display: none;
+  }
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+  }
+  &__link {
+    color: var(--blue-color);
+    text-align: center;
+    font-size: var(--text-base);
+    font-style: normal;
+    font-weight: 400;
+    transition: 0.4s;
+    &:hover {
+      color: var(--dark-blue-color);
+    }
   }
 }
