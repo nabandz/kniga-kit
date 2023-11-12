@@ -1,6 +1,8 @@
 html {
   box-sizing: border-box;
   font-variant-numeric: lining-nums;
+  scroll-padding-top: 64px;
+  scroll-behavior: smooth;
 }
 
 *,

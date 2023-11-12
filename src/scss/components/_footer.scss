@@ -92,20 +92,4 @@
       width: 95px;
     }
   }
-  &-elements {
-    &__whale {
-      width: 209px;
-      position: absolute;
-      bottom: -24px;
-      right: 63px;
-      object-fit: contain;
-      @include lg {
-        width: 169px;
-      }
-      @include md {
-        width: 136px;
-        right: 12px;
-      }
-    }
-  }
 }
