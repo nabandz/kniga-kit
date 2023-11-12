@@ -34,6 +34,7 @@
     list-style-type: none;
   }
   &__link {
+    z-index: 2;
     position: relative;
     font-weight: 400;
     font-size: var(--text-base);
@@ -79,7 +80,7 @@
   &__store {
     display: flex;
     z-index: 2;
-    width: 147px;
+    width: 40px;
     transition: 0.4s;
     &:hover {
       transform: translateY(-3px);
