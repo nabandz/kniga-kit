@@ -16,21 +16,21 @@
   }
 }
 
-@keyframes drawing {
+@keyframes moveLight {
+  from {
+    transform: translateX(-14rem) skewX(-45deg);
+  }
+  to {
+    transform: translateX(32rem) skewX(-45deg);
+  }
+}
+
+@keyframes move {
   0% {
-    transform: translateX(0%) rotate(10deg);
-  }
-  20% {
-    transform: translateX(5%) rotateZ(5deg);
-  }
-  40% {
-    transform: translateX(10%) rotateZ(10deg);
-  }
-  80% {
-    transform: translateX(15%) rotateZ(5deg);
+    transform: translateY(-4px);
   }
   100% {
-    transform: translateX(20%);
+    transform: translateY(4px);
   }
 }
 
@@ -50,6 +50,7 @@
   animation-name: fade;
   animation-duration: 1.5s;
 }
+
 @keyframes fade {
   from {
     opacity: 0.1;

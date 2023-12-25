@@ -1,347 +1,117 @@
 .hero {
-  padding: 96px 0 64px 0;
-  z-index: 5;
-  position: relative;
-  height: 100vh;
-  min-height: 900px;
-  background-color: var(--soft-blue-color);
-  &::after {
-    content: "";
-    position: absolute;
-    background: url("@img/bg-elements/panels/2.svg") bottom/contain no-repeat;
-    left: 0;
-    bottom: -1px;
-    width: 100%;
-    height: 100%;
-    background-size: 100%;
-    pointer-events: none;
-  }
-  @include lg {
-    height: 900px;
-  }
-  @include sm {
-    padding: 64px 0 32px 0;
-  }
+  display: flex;
+  background: var(--color-blue);
+  padding-bottom: 3.375rem;
+  height: 700px;
   &__container {
-    height: 100%;
     position: relative;
-  }
-  &__wrapper {
-    padding-top: 123px;
-    display: flex;
-    max-width: 460px;
-    flex-direction: column;
-    @include lg {
-      margin: 0 auto;
-      padding-top: 64px;
-      max-width: 482px;
-    }
-  }
-  &__title {
-    margin: 0;
-    position: relative;
-    color: var(--dark-blue-color);
-    font-size: 96px;
-    font-weight: 800;
-    &::after {
-      content: "";
-      position: absolute;
-      bottom: 69px;
-      right: -71px;
-      rotate: -2deg;
-      width: 100px;
-      height: 80px;
-      animation: drawing 3s infinite alternate ease-in-out;
-      background-image: url("@img/bg-elements/pencil.png");
-      background-size: contain;
-      background-repeat: no-repeat;
-      @include md {
-        bottom: 76px;
-        right: -17px;
-        width: 71px;
-        height: 74px;
-      }
-      @include sm {
-        bottom: 49px;
-        right: 17px;
-        width: 38px;
-        height: 52px;
-      }
-    }
-    @include lg {
-      text-align: center;
-    }
-    @include sm {
-      font-size: 60px;
-    }
+    width: 100%;
   }
   &__subtitle {
-    color: var(--light-color);
-    font-size: var(--text-2xl);
-    font-weight: 600;
+    width: 50%;
+    margin-top: 1rem;
+    font-size: var(--text-4xl);
+    font-weight: 800;
+    color: var(--color-white);
     span {
-      color: var(--dark-blue-color);
-    }
-    @include lg {
-      br {
-        display: none;
-      }
-      text-align: center;
-    }
-    @include sm {
-      font-size: var(--text-base);
+      color: var(--color-pink);
     }
   }
-  &__description {
-    margin-top: 16px;
-    color: var(--light-color);
-    font-size: var(--text-base);
-    font-weight: 400;
-    @include lg {
-      text-align: center;
-    }
-    @include sm {
-      font-size: var(--text-sm);
-    }
-  }
-  &__qr-block {
-    margin-top: 32px;
+  &__tags {
+    margin-top: 1rem;
     display: flex;
+    gap: 1rem;
+  }
+  &__tag {
+    display: flex;
+    padding: 0.5rem 0.75rem;
+    justify-content: center;
     align-items: center;
-    gap: 26px;
-    @include lg {
-      display: none;
-    }
-  }
-  &__qr {
-    min-width: 150px;
-    height: 150px;
-    padding: 15px;
-    border-radius: 42.719px;
-    background: var(--light-color);
-    transition: 0.4s;
-    img {
-      width: 100%;
-      height: 100%;
-    }
+    gap: 0.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--color-white);
+    transition: all 0.3s ease-in-out;
+
+    color: var(--color-white);
+    font-size: var(--text-md);
+    font-weight: 500;
     &:hover {
-      transform: translateY(-3px);
-      box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.35);
-    }
-  }
-  &__text {
-    margin: 0;
-    color: var(--light-color);
-    font-size: var(--text-2xl);
-    font-weight: 600;
-    span {
-      color: var(--dark-blue-color);
+      box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.25);
     }
   }
   &__stores {
-    margin-top: 32px;
-    display: flex;
-    gap: 16px;
-    align-items: center;
-    @include lg {
-      position: absolute;
-      bottom: 64px;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-    @include sm {
-      gap: 8px;
-      flex-direction: column;
-    }
-  }
-  &__item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    row-gap: 16px;
-  }
-  &__button {
-    width: 133px;
-    height: 40px;
-    transition: 0.4s;
-    cursor: pointer;
-    img {
-      display: block;
-      width: 100%;
-    }
-    &:hover {
-      transform: translateY(-3px);
-    }
+    margin-top: 2rem;
   }
   &__socials {
+    padding: inherit;
     position: absolute;
-    bottom: 0px;
-    right: 20px;
-    display: flex;
-    column-gap: 16px;
-    align-items: center;
-    justify-content: end;
-    @include lg {
-      left: 50%;
-      transform: translateX(-50%);
-      justify-content: center;
-    }
+    bottom: 0;
+    left: 0;
   }
-  &__social {
-    width: 32px;
-    height: 32px;
-    transition: 0.4s;
-    img {
-      width: 100%;
+  &__bg-elements {
+    &_raccoons {
+      padding: inherit;
+      position: absolute;
+      right: 0;
+      bottom: -3.375rem;
     }
-    &:hover {
-      transform: translateY(-3px);
+    &_star {
+      position: absolute;
+      animation: move 0.9s infinite alternate ease-in-out;
+    }
+    &_star-1 {
+      bottom: 340px;
+      right: 210px;
+      rotate: (45deg);
+      animation-delay: 0.2s;
+    }
+    &_star-2 {
+      bottom: 180px;
+      right: 550px;
+      rotate: (-25deg);
+      animation-delay: 0.4s;
+    }
+    &_star-3 {
+      bottom: 460px;
+      right: 550px;
+      animation-delay: 0.3s;
     }
   }
 }
-.bg-elements {
-  z-index: -3;
-  position: absolute;
-  width: 100%;
-  top: 0;
-  left: 0;
-  &__whale-bg {
-    position: absolute;
-    width: 544px;
-    top: 129px;
-    right: 32px;
-    z-index: -5;
-    @include xl {
-      width: 468px;
-      top: 171px;
+
+.stores {
+  display: flex;
+  gap: 0.5rem;
+  &__item {
+    display: block;
+    height: 40px;
+    transition: all 0.3s ease-in-out;
+    img {
+      height: 100%;
+      object-fit: contain;
     }
-    @include lg {
-      width: 323px;
-      top: 291px;
-      right: 50%;
-      transform: translateX(50%);
+    &:hover {
+      transform: translateY(-2px);
     }
   }
-  &__whale {
-    position: absolute;
-    top: 183px;
-    right: 14px;
-    width: 541px;
-    animation: swim 12s infinite alternate ease-in-out;
-    z-index: -4;
+}
+
+.socials {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  &__item {
+    display: flex;
+    width: 40px;
+    transition: all 0.3s ease-in-out;
     img {
       width: 100%;
+      object-fit: contain;
     }
-    @include xl {
-      top: 200px;
-      width: 511px;
-    }
-    @include lg {
-      top: 281px;
-      right: 159px;
-      width: 399px;
-    }
-    @include md {
-      right: 73px;
-    }
-    @include sm {
-      top: 330px;
-      right: 22px;
-      width: 284px;
-    }
-  }
-  &__fishs {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: -3;
-  }
-  &__fish {
-    animation: swim 10s infinite alternate ease-in-out;
-    &_red {
-      &:nth-child(1) {
-        position: absolute;
-        width: 63px;
-        top: 210px;
-        right: 214px;
-        animation-duration: 8s;
-        @include lg {
-          top: 290px;
-        }
-        @include md {
-          top: 318px;
-          width: 52px;
-          right: 119px;
-        }
-        @include sm {
-          top: 278px;
-          right: 119px;
-        }
-      }
-      &:nth-child(2) {
-        position: absolute;
-        width: 50px;
-        top: 599px;
-        right: 115px;
-        animation-duration: 6s;
-        @include lg {
-          display: none;
-        }
-      }
-    }
-    &_blue {
-      position: absolute;
-      top: 267px;
-      right: 167px;
-      rotate: 334deg;
-      width: 50px;
-      animation-duration: 7s;
-      @include lg {
-        top: 350px;
-      }
-      @include md {
-        top: 370px;
-        width: 42px;
-        right: 148px;
-      }
-      @include sm {
-        top: 320px;
-        right: 68px;
-      }
-    }
-    &_yellow {
-      position: absolute;
-      top: 207px;
-      right: 73px;
-      width: 53px;
-      animation-duration: 8s;
-      @include lg {
-        right: 100px;
-        top: 287px;
-      }
-      @include md {
-        right: 67px;
-        top: 379px;
-        width: 47px;
-      }
-      @include sm {
-        right: 58px;
-        top: 269px;
-        width: 41px;
-      }
-    }
-    &_white {
-      position: absolute;
-      top: 571px;
-      right: 177px;
-      width: 74px;
-      rotate: -10deg;
-      animation-duration: 5s;
-      @include lg {
-        display: none;
-      }
+    &:hover {
+      transform: translateY(-2px);
+      border-radius: 3.125rem;
+      box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.25);
     }
   }
 }

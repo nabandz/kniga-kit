@@ -1,0 +1,12 @@
+.description {
+  color: var(--color-grey);
+  font-variant-numeric: lining-nums proportional-nums;
+  font-size: var(--text-md);
+  font-weight: 500;
+  &_white {
+    color: var(--color-white);
+  }
+  &_blue {
+    color: var(--color-blue);
+  }
+}

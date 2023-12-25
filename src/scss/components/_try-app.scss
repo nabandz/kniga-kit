@@ -1,140 +1,59 @@
 .try-app {
-  padding: 96px 0 64px 0;
+  padding: 4rem 0;
   background: url("@img/sea-bg.jpg") center (top/cover) no-repeat;
   background-attachment: fixed;
   overflow-y: hidden;
   position: relative;
-  &::before {
-    content: "";
-    position: absolute;
-    background: url("@img/bg-elements/panels/8.svg") top/contain no-repeat;
-    left: 0;
-    top: -1px;
-    width: 100%;
-    height: 100%;
-    background-size: 100%;
-    pointer-events: none;
-  }
-  @include sm {
-    padding: 32px 0;
-  }
-  &__container {
-    position: relative;
-  }
   &__title {
     text-align: center;
   }
   &__stores {
-    margin-top: 32px;
+    margin-top: 2rem;
     display: flex;
     justify-content: center;
-    column-gap: 24px;
-    @include lg {
-      gap: 16px;
-    }
-    @include sm {
-      gap: 16px;
-      flex-direction: column;
-    }
+    gap: 2rem;
   }
   &__item {
+    width: 300px;
+    padding: 1rem;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    row-gap: 16px;
+    gap: 1rem;
+    border-radius: 2rem;
+    background: var(--color-white);
+    box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.25);
   }
-  &__store {
-    color: var(--light-color);
-    font-size: var(--text-2xl);
-    font-weight: 600;
-    @include lg {
-      display: none;
-    }
-  }
-  &__button {
-    z-index: 5;
-    width: 180px;
-    max-height: 180px;
-    padding: 16px;
-    border-radius: 54px;
-    background: var(--light-color);
-    transition: 0.4s;
-    cursor: pointer;
+  &__qr {
+    display: block;
+    min-width: 110px;
+    width: 110px;
     img {
       display: block;
       width: 100%;
     }
+  }
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  &__text {
+    font-variant-numeric: lining-nums proportional-nums;
+    font-weight: 700;
+    span {
+      color: var(--color-blue);
+    }
+  }
+  &__store {
+    display: block;
+    height: 40px;
+    transition: all 0.3s ease-in-out;
+    img {
+      height: 100%;
+      object-fit: contain;
+    }
     &:hover {
-      transform: translateY(-3px);
-      box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.35);
-    }
-    @include lg {
-      width: 133px;
-      height: 40px;
-      background: rgba(0, 0, 0, 0);
-      padding: 0;
-    }
-  }
-  &__google-play {
-    @include lg {
-      content: url("@img/icons/stores/google-play.png");
-    }
-  }
-  &__app-store {
-    @include lg {
-      content: url("@img/icons/stores/app-store.png");
-    }
-  }
-  &__rustore {
-    @include lg {
-      content: url("@img/icons/stores/rustore.png");
-    }
-  }
-  &-elements {
-    position: absolute;
-    width: 100%;
-    top: 0;
-    left: 0;
-    &__whale {
-      animation: swim 12s infinite alternate ease-in-out;
-      position: absolute;
-      top: 137px;
-      left: 36px;
-      width: 306px;
-      @include xl {
-        top: 158px;
-        left: 4px;
-        width: 253px;
-      }
-      @include lg {
-        top: 104px;
-        left: 0px;
-        width: 168px;
-      }
-      @include md {
-        display: none;
-      }
-    }
-    &__ship {
-      animation: ship 4s infinite alternate ease-in-out;
-      position: absolute;
-      top: 126px;
-      right: 41px;
-      width: 223px;
-      rotate: -5deg;
-      @include xl {
-        top: 182px;
-        right: 17px;
-        width: 178px;
-      }
-      @include lg {
-        top: 97px;
-        right: 28px;
-        width: 108px;
-      }
-      @include md {
-        display: none;
-      }
+      transform: translateY(-2px);
     }
   }
 }

@@ -1,8 +1,8 @@
 html {
   box-sizing: border-box;
   font-variant-numeric: lining-nums;
-  scroll-padding-top: 64px;
   scroll-behavior: smooth;
+  scrollbar-gutter: stable;
 }
 
 *,
@@ -14,7 +14,7 @@ html {
 body {
   margin: 0;
   font-family: var(--font-family);
-  background-color: var(--light-color);
+  background-color: var(--color-white);
   cursor: default;
 }
 
@@ -46,7 +46,7 @@ a {
   appearance: none;
   border: none;
   border-radius: 0;
-  background-color: #fff;
+  background-color: var(--color-white);
 
   &::-webkit-search-decoration,
   &::-webkit-search-cancel-button,
@@ -60,23 +60,6 @@ a {
   margin: 0 auto;
   padding: 0 var(--container-offset);
   max-width: var(--container-width);
-  @include xl {
-    max-width: 992px;
-  }
-  @include lg {
-    max-width: 768px;
-  }
-  @include md {
-    max-width: 576px;
-  }
-  @include sm {
-    max-width: 360px;
-    padding: 0 10px;
-  }
-}
-
-.hidden {
-  visibility: hidden;
 }
 
 .show {
@@ -85,4 +68,8 @@ a {
 
 .hide {
   display: none;
+}
+
+.hidden {
+  visibility: hidden;
 }

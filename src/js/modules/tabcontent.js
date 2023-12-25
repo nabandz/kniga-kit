@@ -9,14 +9,14 @@ function activateTabContent() {
     });
 
     tabs.forEach((item) => {
-      item.classList.remove("tabcontent__item_active");
+      item.classList.remove("tabcontent__item_active", "fade");
     });
   }
 
   function showTabContent(i = 0) {
     tabsContent[i].classList.add("show", "fade");
     tabsContent[i].classList.remove("hide");
-    tabs[i].classList.add("tabcontent__item_active");
+    tabs[i].classList.add("tabcontent__item_active", "fade");
   }
 
   hideTabContent();

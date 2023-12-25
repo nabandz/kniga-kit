@@ -1,95 +1,37 @@
 .footer {
-  padding: 24px 0;
-  background: var(--dark-blue-color);
-  &__container {
-    position: relative;
-  }
+  padding: 3.375rem 0;
   &__wrapper {
-    margin-top: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  &__top {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  &__logo {
+    height: 60px;
+    img {
+      display: block;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+  &__bottom {
+    border-top: 3px solid var(--color-blue);
+    padding-top: 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    @include lg {
-      margin-top: 16px;
-    }
-    @include md {
-      flex-direction: column;
-      gap: 28px;
-    }
-  }
-  &__logo {
-    display: block;
-    width: 145px;
-    @include lg {
-      width: 110px;
-    }
-    @include md {
-      margin: 0 auto;
-    }
-  }
-  &__info {
-    display: flex;
-    flex-direction: column;
-    row-gap: 15px;
-    list-style-type: none;
   }
   &__link {
-    z-index: 2;
-    position: relative;
-    font-weight: 400;
-    font-size: var(--text-base);
-    line-height: normal;
-    color: var(--light-color);
-    text-decoration: none;
-    &::before {
-      content: "";
-      bottom: -5px;
-      left: 0;
-      position: absolute;
-      width: 0%;
-      height: 1px;
-      background-color: var(--light-color);
-      transition: 0.4s;
-    }
-    &:hover::before {
-      width: 100%;
-    }
-  }
-  &__socials {
-    display: flex;
-    column-gap: 16px;
-    justify-content: end;
-  }
-  &__social {
-    z-index: 2;
-    width: 32px;
-    height: 32px;
-    transition: 0.4s;
-    img {
-      width: 100%;
-    }
+    color: var(--color-blue);
+    font-size: var(--text-md);
+    font-weight: 900;
+    transition: all 0.3s ease-in-out;
     &:hover {
-      transform: translateY(-3px);
-    }
-  }
-  &__stores {
-    display: flex;
-    position: relative;
-    column-gap: 8px;
-  }
-  &__store {
-    display: flex;
-    z-index: 2;
-    width: 40px;
-    transition: 0.4s;
-    &:hover {
-      transform: translateY(-3px);
-    }
-    @include lg {
-      width: 120px;
-    }
-    @include sm {
-      width: 95px;
+      color: #79a3f7;
     }
   }
 }
