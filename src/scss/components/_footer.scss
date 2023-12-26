@@ -1,5 +1,8 @@
 .footer {
   padding: 3.375rem 0;
+  @include lg {
+    padding: 2rem 0;
+  }
   &__wrapper {
     display: flex;
     flex-direction: column;
@@ -9,9 +12,18 @@
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    @include sm {
+      align-items: center;
+    }
   }
   &__logo {
     height: 60px;
+    @include xl {
+      height: 50px;
+    }
+    @include sm {
+      height: 40px;
+    }
     img {
       display: block;
       height: 100%;
@@ -24,6 +36,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 1rem;
+    @include sm {
+      flex-direction: column;
+      align-items: center;
+    }
   }
   &__link {
     color: var(--color-blue);

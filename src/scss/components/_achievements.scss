@@ -1,6 +1,9 @@
 .achievements {
   padding: 4rem 0;
   background-color: var(--color-blue);
+  @include lg {
+    padding: 2rem 0;
+  }
   &__description {
     margin-top: 1rem;
   }
@@ -8,6 +11,12 @@
     margin-top: 2rem;
     display: flex;
     gap: 2rem;
+    @include lg {
+      gap: 1rem;
+    }
+    @include md {
+      flex-direction: column;
+    }
   }
   &__item {
     position: relative;
@@ -38,6 +47,12 @@
   &__img {
     background: var(--color-white);
     padding: 2rem 4.5rem;
+    @include lg {
+      padding: 4vw;
+    }
+    @include md {
+      padding: 5vw 30vw;
+    }
     img {
       display: block;
     }
@@ -46,7 +61,7 @@
     height: 100%;
     padding: 2rem 3rem;
     display: flex;
-    align-items: center;
+    align-items: start;
     justify-content: center;
     background-color: var(--color-blue);
     color: var(--color-white);
@@ -54,5 +69,11 @@
     font-variant-numeric: lining-nums proportional-nums;
     font-size: var(--text-md);
     font-weight: 400;
+    @include lg {
+      padding: 4vw;
+    }
+    @include md {
+      padding: 5vw;
+    }
   }
 }

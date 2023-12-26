@@ -4,6 +4,9 @@
   background-attachment: fixed;
   overflow-y: hidden;
   position: relative;
+  @include lg {
+    padding: 2rem 0;
+  }
   &__title {
     text-align: center;
   }
@@ -12,9 +15,16 @@
     display: flex;
     justify-content: center;
     gap: 2rem;
+    @include lg {
+      gap: 1rem;
+    }
+    @include sm {
+      flex-direction: column;
+      align-items: center;
+    }
   }
   &__item {
-    width: 300px;
+    flex: 1;
     padding: 1rem;
     display: flex;
     align-items: center;
@@ -22,11 +32,21 @@
     border-radius: 2rem;
     background: var(--color-white);
     box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.25);
+    @include lg {
+      justify-content: center;
+      flex-direction: column-reverse;
+    }
+    @include sm {
+      width: 288px;
+      justify-content: start;
+      flex-direction: row;
+    }
   }
   &__qr {
     display: block;
     min-width: 110px;
     width: 110px;
+    height: 110px;
     img {
       display: block;
       width: 100%;
@@ -40,6 +60,15 @@
   &__text {
     font-variant-numeric: lining-nums proportional-nums;
     font-weight: 700;
+    @include xl {
+      font-size: var(--text-xl);
+    }
+    @include lg {
+      text-align: center;
+    }
+    @include sm {
+      text-align: start;
+    }
     span {
       color: var(--color-blue);
     }

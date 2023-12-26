@@ -7,6 +7,9 @@
     var(--color-pink) 20%,
     var(--color-pink) 100%
   );
+  @include lg {
+    padding-bottom: 2rem;
+  }
   &__wrapper {
     padding: 3.375rem;
     display: flex;
@@ -15,10 +18,25 @@
     border-radius: 2rem;
     background: var(--color-white);
     box-shadow: 0px 20px 70px 0px rgba(0, 0, 0, 0.25);
+    @include lg {
+      padding: 2.5rem;
+    }
+    @include lg {
+      gap: 2.5rem;
+    }
+    @include sm {
+      padding: 2rem;
+      gap: 5rem;
+    }
   }
   &__top {
     display: flex;
     justify-content: space-between;
+    gap: 0.5rem;
+    @include md {
+      flex-direction: column-reverse;
+      gap: 1rem;
+    }
   }
   &__qr-block {
     padding-top: 3.375rem;
@@ -26,6 +44,9 @@
     display: flex;
     align-items: center;
     flex: 1;
+    @include lg {
+      padding-top: 2rem;
+    }
   }
   &__bg-elements {
     &_star {
@@ -37,17 +58,52 @@
       left: 90px;
       rotate: (45deg);
       animation-delay: 0.2s;
+      @include xl {
+        top: 10px;
+        left: 60px;
+      }
+      @include lg {
+        top: 0px;
+      }
+      @include md {
+        left: 80px;
+      }
+      @include sm {
+        left: 6px;
+      }
     }
     &_star-2 {
       top: 30px;
       left: 300px;
       rotate: (-25deg);
       animation-delay: 0.4s;
+      @include xl {
+        top: 45px;
+        left: 260px;
+      }
+      @include sm {
+        top: 0px;
+        left: 204px;
+      }
     }
     &_star-3 {
       top: 160px;
       left: 150px;
       animation-delay: 0.3s;
+      @include xl {
+        top: 165px;
+        left: 110px;
+      }
+      @include lg {
+        top: 140px;
+      }
+      @include md {
+        top: 125px;
+      }
+      @include sm {
+        top: 160px;
+        left: 50px;
+      }
     }
     &_fish {
       position: absolute;
@@ -57,10 +113,28 @@
     &_fish-1 {
       top: 0px;
       left: 230px;
+      @include xl {
+        top: 5px;
+        left: 160px;
+      }
+      @include sm {
+        display: none;
+      }
     }
     &_fish-2 {
       top: 140px;
       left: 300px;
+      @include xl {
+        top: 150px;
+        left: 180px;
+      }
+      @include md {
+        top: 135px;
+      }
+      @include sm {
+        top: 140px;
+        left: 100px;
+      }
     }
     &_ship {
       position: absolute;
@@ -68,6 +142,20 @@
       bottom: -4rem;
       right: 0;
       animation: ship 3s infinite alternate ease-in-out;
+      @include xl {
+        height: 150px;
+      }
+      @include lg {
+        bottom: -3rem;
+        height: 90px;
+      }
+      @include md {
+        height: 150px;
+      }
+      @include sm {
+        bottom: -5.5rem;
+        height: 100px;
+      }
     }
   }
   &__info {
@@ -87,8 +175,21 @@
     padding-top: 3.375rem;
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    grid-auto-rows: auto;
+    grid-auto-rows: 1fr;
     gap: 1rem;
+    @include xl {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    @include lg {
+      padding-top: 2.5rem;
+    }
+    @include md {
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+    @include sm {
+      padding-top: 2rem;
+      text-align: center;
+    }
   }
 }
 
@@ -102,6 +203,9 @@
   background: linear-gradient(180deg, #79a3f7 0%, var(--color-blue) 100%);
   box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.25);
   overflow: hidden;
+  @include sm {
+    padding: 1.25rem;
+  }
   &::before {
     content: "";
     position: absolute;
@@ -120,26 +224,46 @@
     flex-direction: row-reverse;
     align-items: center;
     justify-content: space-between;
+    @include sm {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
   }
   &__picture {
     min-width: 55px;
     width: 55px;
     height: 55px;
+    @include xl {
+      min-width: 50px;
+      width: 50px;
+      height: 50px;
+    }
     img {
       width: 100%;
       height: 100%;
     }
   }
+  &__title {
+    @include sm {
+      text-align: center;
+    }
+  }
   &__description {
     font-weight: 400;
+    @include sm {
+      text-align: center;
+    }
   }
 }
 
 .qr {
-  width: 300px;
+  width: 260px;
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  @include sm {
+    justify-content: center;
+  }
   &__img {
     width: 96px;
     height: 96px;
@@ -157,5 +281,8 @@
     color: var(--color-grey);
     font-size: var(--text-md);
     font-weight: 500;
+    @include sm {
+      font-size: var(--text-sm);
+    }
   }
 }

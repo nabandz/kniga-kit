@@ -1,6 +1,9 @@
 .policy {
   padding: 4rem 0;
   background-color: var(--color-blue);
+  @include lg {
+    padding: 2rem 0;
+  }
   &__wrapper {
     display: flex;
     flex-direction: column;

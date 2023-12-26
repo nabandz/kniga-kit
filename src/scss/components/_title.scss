@@ -3,17 +3,41 @@
   font-size: var(--text-14xl);
   font-weight: 900;
   color: var(--color-white);
-  &_2xl {
+  @include lg {
+    font-size: var(--text-9xl);
+  }
+  @include sm {
+    font-size: var(--text-7xl);
+  }
+  &_sm {
     font-weight: 700;
     font-size: var(--text-2xl);
+    @include sm {
+      font-size: var(--text-xl);
+    }
   }
-  &_4xl {
+  &_md {
     font-weight: 700;
     font-size: var(--text-4xl);
+    @include xl {
+      font-size: var(--text-2xl);
+    }
+    @include sm {
+      font-size: var(--text-xl);
+    }
   }
-  &_9xl {
+  &_lg {
     font-weight: 800;
     font-size: var(--text-9xl);
+    @include xl {
+      font-size: var(--text-7xl);
+    }
+    @include lg {
+      font-size: var(--text-5xl);
+    }
+    @include sm {
+      font-size: var(--text-3xl);
+    }
   }
   &_blue {
     color: var(--color-blue);

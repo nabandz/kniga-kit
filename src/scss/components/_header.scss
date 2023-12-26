@@ -1,7 +1,7 @@
 .header {
   padding: 3.375rem 0;
   background-color: var(--color-blue);
-  @include sm {
+  @include lg {
     padding: 2rem 0;
   }
   &__wrapper {
