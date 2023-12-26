@@ -51,7 +51,7 @@
   &__bg-elements {
     &_star {
       position: absolute;
-      animation: move 0.9s infinite alternate ease-in-out;
+      animation: moveUp 0.9s infinite alternate ease-in-out;
     }
     &_star-1 {
       top: 0px;
@@ -217,7 +217,7 @@
     transform: translateX(-14rem) skewX(-45deg);
   }
   &:hover::before {
-    animation: moveLight 1s ease-in-out;
+    animation: moveLight 1.15s ease-in-out;
   }
   &__wrapper {
     display: flex;

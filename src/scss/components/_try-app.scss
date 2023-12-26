@@ -24,7 +24,6 @@
     }
   }
   &__item {
-    flex: 1;
     padding: 1rem;
     display: flex;
     align-items: center;
@@ -33,8 +32,8 @@
     background: var(--color-white);
     box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.25);
     @include lg {
+      width: 200px;
       justify-content: center;
-      flex-direction: column-reverse;
     }
     @include sm {
       width: 288px;
@@ -47,6 +46,12 @@
     min-width: 110px;
     width: 110px;
     height: 110px;
+    @include lg {
+      display: none;
+    }
+    @include sm {
+      display: block;
+    }
     img {
       display: block;
       width: 100%;
@@ -62,12 +67,6 @@
     font-weight: 700;
     @include xl {
       font-size: var(--text-xl);
-    }
-    @include lg {
-      text-align: center;
-    }
-    @include sm {
-      text-align: start;
     }
     span {
       color: var(--color-blue);

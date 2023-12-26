@@ -65,6 +65,15 @@ a {
   }
 }
 
+.stop-scroll {
+  overflow: hidden;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
 .show {
   display: block;
 }
@@ -75,4 +84,17 @@ a {
 
 .hidden {
   visibility: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-light-grey);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 0.5rem;
+  background: var(--color-pink);
 }
