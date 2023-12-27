@@ -1,13 +1,15 @@
 .title {
   margin: 0;
-  font-size: var(--text-14xl);
   font-weight: 900;
   color: var(--color-white);
-  @include lg {
-    font-size: var(--text-9xl);
-  }
-  @include sm {
-    font-size: var(--text-7xl);
+  &_h1 {
+    font-size: var(--text-14xl);
+    @include lg {
+      font-size: var(--text-9xl);
+    }
+    @include sm {
+      font-size: var(--text-7xl);
+    }
   }
   &_sm {
     font-weight: 700;

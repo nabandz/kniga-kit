@@ -1,6 +1,6 @@
 import "../libs/just-validate.min.js";
 
-new window.JustValidate(".form", {
+export default new window.JustValidate(".form", {
   rules: {
     name: {
       required: true,
